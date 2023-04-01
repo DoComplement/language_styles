@@ -266,14 +266,6 @@ beginning of the traceback. An optional level number tells at which level to sta
                 <Param name="[, level]" />
             </Overload>
         </KeyWord>
-        <KeyWord name="delay" func="yes">
-            <Overload retVal="void" descr="
-Schedules a function to be executed after delayTime seconds have passed, without yielding the current thread. This function allows multiple Lua threads to be executed in parallel from the same stack. The delay will have a minimum duration of 29 milliseconds, but this minimum may be higher depending on the target framerate and various throttling conditions. If the delayTime parameter is not specified, the minimum duration will be used.
-        ">
-                <Param name="delayTime" />
-                <Param name="callback" />
-            </Overload>
-        </KeyWord>
         <KeyWord name="do" func="no" />
         <KeyWord name="dofile" func="yes">
             <Overload retVal="void" descr="
@@ -1596,14 +1588,7 @@ e as argument, and uses the result of the call as its result.
 Returns the type of its only argument, coded as a string. The possible results of this function 
 are 'nil' (a string, not the value nil), 'number', 'string', 'boolean', 'table', 'function', 'thread', and 'userdata'. 
         ">
-                <Param name="object" />
-            </Overload>
-        </KeyWord>
-        <KeyWord name="typeof" func="yes">
-            <Overload retVal="void" descr="
-Returns the type of the object specified, as a string. This function is more accurate than Lua's native type function, as it does not denote Roblox-specific types as userdata. 
-        ">
-                <Param name="object" />
+                <Param name="v" />
             </Overload>
         </KeyWord>
         <KeyWord name="unpack" func="yes">
@@ -1705,7 +1690,6 @@ after this first result. In case of any error, xpcall returns false plus the res
         <KeyWord name="crypto.sha256" />
         <KeyWord name="crypto.sha384" />
         <KeyWord name="crypto.sha512" />
-        <KeyWord name="delay()" />
         <KeyWord name="display.captureScreen()" />
         <KeyWord name="display.contentCenterX" />
         <KeyWord name="display.contentCenterY" />
@@ -2203,8 +2187,8 @@ after this first result. In case of any error, xpcall returns false plus the res
         <KeyWord name="table.foreachi()" />
         <KeyWord name="table.freeze()" />
         <KeyWord name="table.getn()" />
-        <KeyWord name="table.copy()" />
-        <KeyWord name="table.indexOf()" />
+<!--    <KeyWord name="table.copy()" />         -->
+<!--    <KeyWord name="table.indexOf()" />      -->
         <KeyWord name="table.insert()" />
         <KeyWord name="table.isfrozen()" />
         <KeyWord name="table.maxn()" />
@@ -2227,8 +2211,16 @@ after this first result. In case of any error, xpcall returns false plus the res
         <KeyWord name="timer.resume()" />
         <KeyWord name="tonumber()" />
         <KeyWord name="tostring()" />
+        <KeyWord name="transition.cancel()" />
+        <KeyWord name="transition.dissolve()" />
+        <KeyWord name="transition.from()" />
+        <KeyWord name="transition.to()" />
         <KeyWord name="type()" />
-        <KeyWord name="typeof()" />
         <KeyWord name="unpack()" />
+        <KeyWord name="widget.newButton()" />
+        <KeyWord name="widget.newPickerWheel()" />
+        <KeyWord name="widget.newTabBar()" />
+        <KeyWord name="widget.newTableView()" />
+        <KeyWord name="widget.setTheme()" />
     </AutoComplete>
 </NotepadPlus>
