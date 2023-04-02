@@ -7,7 +7,7 @@
             <Overload retVal="variant" descr="
 Issues an error when the value of its argument v is false (i.e., nil or false);
 otherwise, returns all its arguments. message is an error message; when absent, it 
-defaults to 'assertion failed!'
+defaults to &#34;assertion failed!&#34;
         ">
                 <Param name="v: variant" />
                 <Param name="message: string" />
@@ -25,7 +25,7 @@ Appends content to the file contents at path. If the file does not exist, it err
             <Overload retVal="Axes object" descr="
 Creates a new Axes using list of axes and/or faces. NormalIds (faces) are converted to the corresponding axes.
         ">
-                <Param name="Tuple:axes" />
+                <Param name="axes: Tuple&lt;Axes&gt;" />
             </Overload>
         </KeyWord>
         <KeyWord name="bit32.arshift" func="yes">
@@ -34,202 +34,202 @@ Returns the number x shifted disp bits to the right. The number disp may be any 
 
 This shift operation is what is called arithmetic shift. Vacant bits on the left are filled with copies of the higher bit of x; vacant bits on the right are filled with zeros. In particular, displacements with absolute values higher than 31 result in zero or 0xFFFFFFFF (all original bits are shifted out).
         ">
-                <Param name="x" />
-                <Param name="disp" />
+                <Param name="x: uint" />
+                <Param name="disp: uint" />
             </Overload>
         </KeyWord>
         <KeyWord name="bit32.band" func="yes">
             <Overload retVal="number" descr="
 Returns the bitwise and of its operands.(all original bits are shifted out).
         ">
-                <Param name="Tuple:numbers" />
+                <Param name="nums: Tuple&lt;number&gt;" />
             </Overload>
         </KeyWord>
         <KeyWord name="bit32.bnot" func="yes">
             <Overload retVal="number" descr="
 Returns the bitwise negation of x. For any integer x, the following identity holds:
         ">
-                <Param name="x" />
+                <Param name="x: uint" />
             </Overload>
         </KeyWord>
         <KeyWord name="bit32.bor" func="yes">
             <Overload retVal="number" descr="
 Returns the bitwise or of its operands.
         ">
-                <Param name="Tuple:numbers" />
+                <Param name="nums: Tuple&lt;number&gt;" />
             </Overload>
         </KeyWord>
         <KeyWord name="bit32.btest" func="yes">
             <Overload retVal="boolean" descr="
 Returns a boolean signalling whether the bitwise and of its operands is different from zero.
         ">
-                <Param name="Tuple:numbers" />
+                <Param name="nums: Tuple&lt;number&gt;" />
             </Overload>
         </KeyWord>
         <KeyWord name="bit32.bxor" func="yes">
             <Overload retVal="number" descr="
 Returns the bitwise exclusive-or of its operands.
         ">
-                <Param name="Tuple:numbers" />
+                <Param name="nums: Tuple&lt;number&gt;" />
             </Overload>
         </KeyWord>
         <KeyWord name="bit32.countlz" func="yes">
             <Overload retVal="number" descr="
 Returns the number of consecutive zero bits in the 32-bit representation of the provided number starting from the left-most (most significant) bit. Returns 32 if the provided number is zero.
         ">
-                <Param name="n" />
+                <Param name="n: uint" />
             </Overload>
         </KeyWord>
         <KeyWord name="bit32.countrz" func="yes">
             <Overload retVal="number" descr="
 Returns the number of consecutive zero bits in the 32-bit representation of the provided number starting from the right-most (least significant) bit. Returns 32 if the provided number is zero.
         ">
-                <Param name="n" />
+                <Param name="n: uint" />
             </Overload>
         </KeyWord>
         <KeyWord name="bit32.extract" func="yes">
             <Overload retVal="number" descr="
 Returns the unsigned number formed by the bits field to field + width - 1 from n. Bits are numbered from 0 (least significant) to 31 (most significant). All accessed bits must be in the range [0, 31]. The default for width is 1.
         ">
-                <Param name="n" />
-                <Param name="field" />
-                <Param name="width = 1" />
+                <Param name="n: uint" />
+                <Param name="field: int" />
+                <Param name="width: int = 1" />
             </Overload>
         </KeyWord>
         <KeyWord name="bit32.replace" func="yes">
             <Overload retVal="number" descr="
 Returns a copy of n with the bits field to field + width - 1 replaced by the value v. See bit32.extract() for details about field and width.
         ">
-                <Param name="n" />
-                <Param name="v" />
-                <Param name="field" />
-                <Param name="width = 1" />
+                <Param name="n: uint" />
+                <Param name="v: uint" />
+                <Param name="field: int" />
+                <Param name="width: int = 1" />
             </Overload>
         </KeyWord>
         <KeyWord name="bit32.lrotate" func="yes">
             <Overload retVal="number" descr="
 Returns the number x rotated disp bits to the left. The number disp may be any representable integer. In particular, negative displacements rotate to the right.
         ">
-                <Param name="x" />
-                <Param name="disp" />
+                <Param name="x: uint" />
+                <Param name="disp: uint" />
             </Overload>
         </KeyWord>
         <KeyWord name="bit32.lshift" func="yes">
             <Overload retVal="number" descr="
 Returns the number x shifted disp bits to the left. The number disp may be any representable integer. Negative displacements shift to the right. In any direction, vacant bits are filled with zeros. In particular, displacements with absolute values higher than 31 result in zero (all bits are shifted out).
         ">
-                <Param name="x" />
-                <Param name="disp" />
+                <Param name="x: uint" />
+                <Param name="disp: uint" />
             </Overload>
         </KeyWord>
         <KeyWord name="bit32.rrotate" func="yes">
             <Overload retVal="number" descr="
 Returns the number x rotated disp bits to the right. The number disp may be any representable integer. In particular, negative displacements rotate to the left.
         ">
-                <Param name="x" />
-                <Param name="disp" />
+                <Param name="x: uint" />
+                <Param name="disp: uint" />
             </Overload>
         </KeyWord>
         <KeyWord name="bit32.rshift" func="yes">
             <Overload retVal="number" descr="
 Returns the number x shifted disp bits to the right. The number disp may be any representable integer. Negative displacements shift to the left. In any direction, vacant bits are filled with zeros. In particular, displacements with absolute values higher than 31 result in zero (all bits are shifted out).
         ">
-                <Param name="x" />
-                <Param name="disp" />
+                <Param name="x: uint" />
+                <Param name="disp: uint" />
             </Overload>
         </KeyWord>
         <KeyWord name="bit.arshift" func="yes">
             <Overload retVal="int" descr="Signed-equivalent of bit32.arshift">
-                <Param name="x" />
-                <Param name="disp" />
+                <Param name="x: uint" />
+                <Param name="disp: uint" />
             </Overload>
         </KeyWord>
         <KeyWord name="bit.badd" func="yes">
             <Overload retVal="int" descr="Adds a with b, allows overflows.">
-                <Param name="a" />
-                <Param name="b" />
+                <Param name="a: uint" />
+                <Param name="b: uint" />
             </Overload>
         </KeyWord>
         <KeyWord name="bit.band" func="yes">
-            <Overload retVal="int" descr="Does a bitwise AND (&#38;) on 'val' using 'by'.">
-                <Param name="val" />
-                <Param name="by" />
+            <Overload retVal="int" descr="Does a bitwise AND (&#38;) on &#34;val&#34; using &#34;by&#34;.">
+                <Param name="val: uint" />
+                <Param name="by: uint" />
             </Overload>
         </KeyWord>
         <KeyWord name="bit.bdiv" func="yes">
             <Overload retVal="int" descr="
 Divides dividend by divisor, remainder is not returned.
         ">
-                <Param name="dividend" />
-                <Param name="divisor" />
+                <Param name="dividend: uint" />
+                <Param name="divisor: uint" />
             </Overload>
         </KeyWord>
         <KeyWord name="bit.bmul" func="yes">
-            <Overload retVal="int" descr="Multiplies 'val' using 'by', allows overflows.">
-                <Param name="val" />
-                <Param name="by" />
+            <Overload retVal="int" descr="Multiplies &#34;val&#34; using &#34;by&#34;, allows overflows.">
+                <Param name="val: uint" />
+                <Param name="by: uint" />
             </Overload>
         </KeyWord>
         <KeyWord name="bit.bnot" func="yes">
-            <Overload retVal="number" descr="Does a bitwise NOT on 'val'.">
-                <Param name="val" />
+            <Overload retVal="number" descr="Does a bitwise NOT (unary ~) on &#34;val&#34;.">
+                <Param name="val: uint" />
             </Overload>
         </KeyWord>
         <KeyWord name="bit.bor" func="yes">
-            <Overload retVal="int" descr="Does a bitwise OR (|) on 'val' using 'by'.">
-                <Param name="val" />
-                <Param name="by" />
+            <Overload retVal="int" descr="Does a bitwise OR (|) on &#34;val&#34; using &#34;by&#34;.">
+                <Param name="val: uint" />
+                <Param name="by: uint" />
             </Overload>
         </KeyWord>
         <KeyWord name="bit.bxor" func="yes">
-            <Overload retVal="int" descr="Does a bitwise XOR (⊕) on 'val' using 'by'.">
-                <Param name="val" />
-                <Param name="by" />
+            <Overload retVal="int" descr="Does a bitwise XOR (~) on &#34;val&#34; using &#34;by&#34;.">
+                <Param name="val: uint" />
+                <Param name="by: uint" />
             </Overload>
         </KeyWord>
         <KeyWord name="bit.bswap" func="yes">
-            <Overload retVal="int" descr="Does a bitwise swap on 'val'.">
-                <Param name="val" />
+            <Overload retVal="int" descr="Does a bitwise swap on &#34;val&#34;.">
+                <Param name="val: uint" />
             </Overload>
         </KeyWord>
         <KeyWord name="bit.ror" func="yes">
-            <Overload retVal="int" descr="Returns the 'val' rotated right by 'disp'.">
-                <Param name="val" />
-                <Param name="disp" />
+            <Overload retVal="int" descr="Returns the &#34;val&#34; rotated right by &#34;disp&#34;.">
+                <Param name="val: uint" />
+                <Param name="disp: uint" />
             </Overload>
         </KeyWord>
         <KeyWord name="bit.ror" func="yes">
-            <Overload retVal="int" descr="Returns the 'val' rotated right by 'disp'.">
-                <Param name="val" />
-                <Param name="disp" />
+            <Overload retVal="int" descr="Returns the &#34;val&#34; rotated right by &#34;disp&#34;.">
+                <Param name="val: uint" />
+                <Param name="disp: uint" />
             </Overload>
         </KeyWord>
         <KeyWord name="bit.rol" func="yes">
-            <Overload retVal="int" descr="Returns the 'val' rotated left by 'disp'.">
-                <Param name="val" />
-                <Param name="disp" />
+            <Overload retVal="int" descr="Returns the &#34;val&#34; rotated left by &#34;disp&#34;.">
+                <Param name="val: uint" />
+                <Param name="disp: uint" />
             </Overload>
         </KeyWord>
         <KeyWord name="bit.tohex" func="yes">
-            <Overload retVal="string" descr="Converts 'val' to a hex string.">
-                <Param name="val" />
+            <Overload retVal="string" descr="Converts &#34;val&#34; to a hex string.">
+                <Param name="val: uint" />
             </Overload>
         </KeyWord>
         <KeyWord name="bit.tobit" func="yes">
-            <Overload retVal="string" descr="Converts 'val' into proper form for bitwise operations.">
-                <Param name="val" />
+            <Overload retVal="string" descr="Converts &#34;val&#34; into proper form for bitwise operations.">
+                <Param name="val: uint" />
             </Overload>
         </KeyWord>
         <KeyWord name="bit.lshift" func="yes">
-            <Overload retVal="int" descr="Does a left shift on 'val' using 'by'.">
-                <Param name="val" />
-                <Param name="by" />
+            <Overload retVal="int" descr="Does a left shift on &#34;val&#34; using &#34;by&#34;.">
+                <Param name="val: uint" />
+                <Param name="by: uint" />
             </Overload>
         </KeyWord>
         <KeyWord name="bit.rshift" func="yes">
-            <Overload retVal="int" descr="Does a right shift on 'val' using 'by'.">
-                <Param name="val" />
-                <Param name="by" />
+            <Overload retVal="int" descr="Does a right shift on &#34;val&#34; using &#34;by&#34;.">
+                <Param name="val: uint" />
+                <Param name="by: uint" />
             </Overload>
         </KeyWord>
         <KeyWord name="BrickColor.new" func="yes">
@@ -244,50 +244,40 @@ Divides dividend by divisor, remainder is not returned.
         </KeyWord>
         <KeyWord name="BrickColor.palette" func="yes">
             <Overload retVal="BrickColor object" descr="Constructs a BrickColor from its palette index.">
-                <Param name="paletteValue" />
+                <Param name="paletteValue: int" />
             </Overload>
         </KeyWord>
-        <KeyWord name="BrickColor.random" func="yes">
-            <Overload retVal="BrickColor object" descr="Returns a random BrickColor."></Overload>
+        <KeyWord name="BrickColor.random()" func="yes">
+            <Overload retVal="BrickColor object" descr="Returns a random BrickColor."/>
         </KeyWord>
-        <KeyWord name="BrickColor.White" func="yes">
-            <Overload retVal="BrickColor object" descr="Returns the 'White' BrickColor."></Overload>
+        <KeyWord name="BrickColor.White()" func="yes">
+            <Overload retVal="BrickColor object" descr="Returns the &#34;White&#34; BrickColor."/>
         </KeyWord>
-        <KeyWord name="BrickColor.Gray" func="yes">
-            <Overload retVal="BrickColor object" descr="Returns the 'Medium stone grey' BrickColor.">
+        <KeyWord name="BrickColor.Gray()" func="yes">
+            <Overload retVal="BrickColor object" descr="Returns the &#34;Medium stone grey&#34; BrickColor."/>
+        </KeyWord>
+        <KeyWord name="BrickColor.DarkGray()" func="yes">
+            <Overload retVal="BrickColor object" descr="Returns the &#34;Dark stone grey&#34; BrickColor.">
             </Overload>
         </KeyWord>
-        <KeyWord name="BrickColor.DarkGray" func="yes">
-            <Overload retVal="BrickColor object" descr="Returns the 'Dark stone grey' BrickColor.">
-            </Overload>
+        <KeyWord name="BrickColor.Black()" func="yes">
+            <Overload retVal="BrickColor object" descr="Returns the &#34;Black&#34; BrickColor."/>
         </KeyWord>
-        <KeyWord name="BrickColor.Black" func="yes">
-            <Overload retVal="BrickColor object" descr="Returns the 'Black' BrickColor."></Overload>
+        <KeyWord name="BrickColor.Red()" func="yes">
+            <Overload retVal="BrickColor object" descr="Returns the &#34;Red&#34; BrickColor."/>
         </KeyWord>
-        <KeyWord name="BrickColor.Red" func="yes">
-            <Overload retVal="BrickColor object" descr="Returns the 'Red' BrickColor."></Overload>
+        <KeyWord name="BrickColor.Yellow()" func="yes">
+            <Overload retVal="BrickColor object" descr="Returns the &#34;Yellow&#34; BrickColor."/>
         </KeyWord>
-        <KeyWord name="BrickColor.Yellow" func="yes">
-            <Overload retVal="BrickColor object" descr="Returns the 'Yellow' BrickColor."></Overload>
+        <KeyWord name="BrickColor.Green()" func="yes">
+            <Overload retVal="BrickColor object" descr="Returns the &#34;Green&#34; BrickColor."/>
         </KeyWord>
-        <KeyWord name="BrickColor.Green" func="yes">
-            <Overload retVal="BrickColor object" descr="Returns the 'Green' BrickColor."></Overload>
+        <KeyWord name="BrickColor.Blue()" func="yes">
+            <Overload retVal="BrickColor object" descr="Returns the &#34;Blue&#34; BrickColor."/>
         </KeyWord>
-        <KeyWord name="BrickColor.Blue" func="yes">
-            <Overload retVal="BrickColor object" descr="
-Returns the 'Blue' BrickColor.
-        ">
-            </Overload>
-        </KeyWord>
-        <KeyWord name="BrickColor.Number" func="no" />
-        <KeyWord name="BrickColor.r" func="no" />
-        <KeyWord name="BrickColor.g" func="no" />
-        <KeyWord name="BrickColor.b" func="no" />
-        <KeyWord name="BrickColor.Name" func="no" />
-        <KeyWord name="BrickColor.Color" func="no" />
         <KeyWord name="CellId.new" func="yes">
             <Overload retVal="table,table" descr="unknown">
-                <Param name="unknown" />
+                <Param name="args: Tuple?&lt;variant&gt;" />
             </Overload>
         </KeyWord>
         <KeyWord name="CatalogSearchParams.new" func="yes">
@@ -295,7 +285,7 @@ Returns the 'Blue' BrickColor.
 The CatalogSearchParams data type stores the parameters of a catalog search via AvatarEditorService:SearchCatalog().
 
 When accessing the value of the CatalogSearchParams.BundleTypes or CatalogSearchParams.AssetTypes property the returned table will be read-only to avoid confusion when not directly accessing the CatalogSearchParams instance.
-        "></Overload>
+        "/>
         </KeyWord>
         <KeyWord name="CFrame.new" func="yes">
             <Overload retVal="CFrame object" descr="
@@ -314,71 +304,68 @@ See CFrames : https://create.roblox.com/docs/reference/engine/datatypes/CFrame
             <Overload retVal="CFrame object" descr="
 Returns a CFrame with the position of the first Vector3 and an orientation pointed toward the second.
         ">
-                <Param name="Vector3:at" />
-                <Param name="Vector3:lookAt" />
-                <Param name="Vector3:up" />
+                <Param name="at: Vector3" />
+                <Param name="lookAt: Vector3" />
+                <Param name="up: Vector3" />
             </Overload>
         </KeyWord>
         <KeyWord name="CFrame.fromEulerAnglesXYZ" func="yes">
             <Overload retVal="CFrame object" descr="
 Returns a rotated CFrame using angles (rx, ry, rz) in radians. Rotations are applied in Z, Y, X order.
         ">
-                <Param name="rx" />
-                <Param name="ry" />
-                <Param name="rz" />
+                <Param name="rx: int" />
+                <Param name="ry: int" />
+                <Param name="rz: int" />
             </Overload>
         </KeyWord>
         <KeyWord name="CFrame.fromEulerAnglesYXZ" func="yes">
             <Overload retVal="CFrame object" descr="
 Returns a rotated CFrame using angles (rx, ry, rz) in radians. Rotations are applied in Z, X, Y order.
         ">
-                <Param name="rx" />
-                <Param name="ry" />
-                <Param name="rz" />
+                <Param name="rx: int" />
+                <Param name="ry: int" />
+                <Param name="rz: int" />
             </Overload>
         </KeyWord>
         <KeyWord name="CFrame.Angles" func="yes">
             <Overload retVal="CFrame object" descr="Equivalent to CFrame.fromEulerAnglesXYZ().">
-                <Param name="rx" />
-                <Param name="ry" />
-                <Param name="rz" />
+                <Param name="rx: int" />
+                <Param name="ry: int" />
+                <Param name="rz: int" />
             </Overload>
         </KeyWord>
         <KeyWord name="CFrame.fromOrientation" func="yes">
             <Overload retVal="CFrame object" descr="Equivalent to CFrame.fromEulerAnglesXYZ().">
-                <Param name="rx" />
-                <Param name="ry" />
-                <Param name="rz" />
+                <Param name="rx: int" />
+                <Param name="ry: int" />
+                <Param name="rz: int" />
             </Overload>
         </KeyWord>
         <KeyWord name="CFrame.fromAxisAngle" func="yes">
             <Overload retVal="CFrame object" descr="
 Returns a rotated CFrame from a unit Vector3 and a rotation in radians.
         ">
-                <Param name="Vector3:v" />
-                <Param name="r" />
+                <Param name="v: Vector3" />
+                <Param name="r: int" />
             </Overload>
         </KeyWord>
         <KeyWord name="CFrame.fromMatrix" func="yes">
             <Overload retVal="CFrame object" descr="
 Returns a CFrame from a translation and the columns of a rotation matrix.
         ">
-                <Param name="Vector3:pos" />
-                <Param name="Vector3:vX" />
-                <Param name="Vector3:vY" />
-                <Param name="Vector3:vZ" />
+                <Param name="pos: Vector3" />
+                <Param name="vX: Vector3" />
+                <Param name="vY: Vector3" />
+                <Param name="vZ: Vector3" />
             </Overload>
         </KeyWord>
-        <KeyWord name="checkcaller" func="yes">
+        <KeyWord name="checkcaller()" func="yes">
             <Overload retVal="boolean" descr="
 Returns true if the current thread is the executor thread. Note: Checkcaller does NOT check the call stack of the function, if you call a game function then it calls out to checkcaller, the result will be true! Be careful.
-        ">
-            </Overload>
+        "/>
         </KeyWord>
-        <KeyWord name="checkparallel" func="yes">
-            <Overload retVal="boolean" descr="Returns whether the current LocalScript has code running in parallel (multiple active threads).
-        ">
-            </Overload>
+        <KeyWord name="checkparallel()" func="yes">
+            <Overload retVal="boolean" descr="Returns whether the current LocalScript has code running in parallel (multiple active threads)."/>
         </KeyWord>
         <KeyWord name="clonefunction" func="yes">
             <Overload retVal="function" descr="Returns a clone of input function f.">
@@ -395,46 +382,46 @@ Returns true if the current thread is the executor thread. Note: Checkcaller doe
 This function is a generic interface to the garbage collector.
 It performs different functions according to its first argument, operation:
 
-    * 'stop': stops the garbage collector.
-    * 'restart': restarts the garbage collector.
-    * 'collect': performs a full garbage-collection cycle.
-    * 'count': returns the total memory in use by Lua (in Kbytes).
-    * 'step': performs a garbage-collection step. The step 'size' is controlled by arg
+    * &#34;stop&#34;: stops the garbage collector.
+    * &#34;restart&#34;: restarts the garbage collector.
+    * &#34;collect&#34;: performs a full garbage-collection cycle.
+    * &#34;count&#34;: returns the total memory in use by Lua (in Kbytes).
+    * &#34;step&#34;: performs a garbage-collection step. The step &#34;size&#34; is controlled by arg
         (larger values mean more steps) in a non-specified way. If you want to control
         the step size you must experimentally tune the value of arg. Returns true if
         the step finished a collection cycle.
-    * 'setpause': sets arg as the new value for the pause of the collector (see §2.10).
+    * &#34;setpause&#34;: sets arg as the new value for the pause of the collector (see §2.10).
         Returns the previous value for pause.
-    * 'setstepmul': sets arg as the new value for the step multiplier of the collector
+    * &#34;setstepmul&#34;: sets arg as the new value for the step multiplier of the collector
         (see §2.10). Returns the previous value for step.
 ">
-                <Param name="String:operation" />
+                <Param name="operation: String" />
             </Overload>
         </KeyWord>
         <KeyWord name="Color3.new" func="yes">
             <Overload retVal="Color3 object" descr="Returns a Color3 with the given red, green, and blue values.">
-                <Param name="r" />
-                <Param name="g" />
-                <Param name="b" />
+                <Param name="r: int" />
+                <Param name="g: int" />
+                <Param name="b: int" />
             </Overload>
         </KeyWord>
         <KeyWord name="Color3.fromRGB" func="yes">
             <Overload retVal="Color3 object" descr="Returns a Color3 from given components within the range of 0 to 255.">
-                <Param name="r" />
-                <Param name="g" />
-                <Param name="b" />
+                <Param name="r: int" />
+                <Param name="g: int" />
+                <Param name="b: int" />
             </Overload>
         </KeyWord>
         <KeyWord name="Color3.fromHSV" func="yes">
             <Overload retVal="Color3 object" descr="Returns a Color3 from the given hue, saturation, and value components.">
-                <Param name="hue" />
-                <Param name="saturation" />
-                <Param name="value" />
+                <Param name="hue: int" />
+                <Param name="saturation: int" />
+                <Param name="value: int" />
             </Overload>
         </KeyWord>
         <KeyWord name="Color3.fromHex" func="yes">
             <Overload retVal="Color3 object" descr="Returns a Color3 from the given hex value.">
-                <Param name="string" />
+                <Param name="hex: string" />
             </Overload>
         </KeyWord>
         <KeyWord name="ColorSequence.new" func="yes">
@@ -450,30 +437,29 @@ Two ColorSequence objects are equivalent only if the values of their ColorSequen
             <Overload retVal="ColorSequence object" descr="
         Returns a ColorSequenceKeypoint from the given time and color.
         ">
-                <Param name="number:time" />
-                <Param name="Color3:color" />
+                <Param name="time: number" />
+                <Param name="color: Color3" />
             </Overload>
         </KeyWord>
         <KeyWord name="coroutine.close" func="yes">
             <Overload retVal="boolean" descr="
 Closes and puts the provided coroutine in a dead state. This function returns true unless the coroutine is in an error state, in which case it returns false and the error message. A coroutine that is currently running cannot be closed. A coroutine cannot be resumed after it is closed.
         ">
-                <Param name="co" />
+                <Param name="co: thread" />
             </Overload>
         </KeyWord>
         <KeyWord name="coroutine.create" func="yes">
             <Overload retVal="thread" descr="
 Creates a new coroutine, with body f. f must be a Lua function. Returns this new
-coroutine, an object with type 'thread'.
+coroutine, an object with type &#34;thread&#34;.
         ">
-                <Param name="Function:f" />
+                <Param name="f: function" />
             </Overload>
         </KeyWord>
-        <KeyWord name="coroutine.isyieldable" func="yes">
+        <KeyWord name="coroutine.isyieldable()" func="yes">
             <Overload retVal="boolean" descr="
 Returns true if the coroutine this function is called within can safely yield. Yielding a coroutine inside metamethods or C functions is prohibited, with the exception of pcall and xpcall.
-        ">
-            </Overload>
+        "/>
         </KeyWord>
         <KeyWord name="coroutine.resume" func="yes">
             <Overload retVal="boolean" descr="
@@ -487,23 +473,21 @@ to yield (if the coroutine yields) or any values returned by the body function (
 coroutine terminates). If there is any error, resume returns false plus the error 
 message.
 ">
-                <Param name="co" />
-                <Param name="[, val, ...]" />
+                <Param name="co: thread" />
+                <Param name="args: Tuple&lt;variant&gt;" />
             </Overload>
         </KeyWord>
-        <KeyWord name="coroutine.running" func="yes">
-            <Overload retVal="thread" descr="
-Returns the running coroutine, or nil when called by the main thread. 
-        "></Overload>
+        <KeyWord name="coroutine.running()" func="yes">
+            <Overload retVal="thread" descr="Returns the running coroutine, or nil when called by the main thread. "/>
         </KeyWord>
         <KeyWord name="coroutine.status" func="yes">
             <Overload retVal="string" descr="
-Returns the status of coroutine co, as a string: 'running', if the coroutine is running (that is, it called status); 
-'suspended', if the coroutine is suspended in a call to yield, or if it has not started running yet; 
-'normal' if the coroutine is active but not running (that is, it has resumed another coroutine); and 
-'dead' if the coroutine has finished its body function, or if it has stopped with an error. 
+Returns the status of coroutine co, as a string: &#34;running&#34;, if the coroutine is running (that is, it called status); 
+&#34;suspended&#34;, if the coroutine is suspended in a call to yield, or if it has not started running yet; 
+&#34;normal&#34; if the coroutine is active but not running (that is, it has resumed another coroutine); and 
+&#34;dead&#34; if the coroutine has finished its body function, or if it has stopped with an error. 
         ">
-                <Param name="co" />
+                <Param name="co: thread" />
             </Overload>
         </KeyWord>
         <KeyWord name="coroutine.wrap" func="yes">
@@ -513,7 +497,7 @@ the coroutine each time it is called. Any arguments passed to the function behav
 arguments to resume. Returns the same values returned by resume, except the first boolean. In 
 case of error, propagates the error. 
         ">
-                <Param name="f" />
+                <Param name="f: function" />
             </Overload>
         </KeyWord>
         <KeyWord name="coroutine.yield" func="yes">
@@ -521,24 +505,24 @@ case of error, propagates the error.
 Suspends the execution of the calling coroutine. The coroutine cannot be running a C function, a 
 metamethod, or an iterator. Any arguments to yield are passed as extra results to resume. 
         ">
-                <Param name="args: Tuple" />
+                <Param name="args: Tuple&lt;variant&gt;" />
             </Overload>
         </KeyWord>
-        <KeyWord name="DateTime.now" func="yes">
-            <Overload retVal="DateTime" descr="Returns a new DateTime representing the current moment in time."></Overload>
+        <KeyWord name="DateTime.now()" func="yes">
+            <Overload retVal="DateTime" descr="Returns a new DateTime representing the current moment in time."/>
         </KeyWord>
         <KeyWord name="DateTime.fromUnixTimestamp" func="yes">
             <Overload retVal="DateTime" descr="
 Returns a new DateTime object from the given Unix timestamp, or the number of seconds since January 1st, 1970 at 00:00 (UTC).
         ">
-                <Param name="number:unixTimestamp" />
+                <Param name="unixTimestamp: number" />
             </Overload>
         </KeyWord>
         <KeyWord name="DateTime.fromUnixTimestampMillis" func="yes">
             <Overload retVal="DateTime" descr="
 Returns a new DateTime object from the given Unix timestamp, or the number of milliseconds since January 1st, 1970 at 00:00 (UTC).
         ">
-                <Param name="number:unixTimestampMillis" />
+                <Param name="unixTimestampMillis: number" />
             </Overload>
         </KeyWord>
         <KeyWord name="DateTime.fromLocalTime" func="yes">
@@ -550,13 +534,13 @@ Time units (hour, minute, second, millisecond) that are outside their normal ran
 Non-integer values are rounded down. For example, providing 2.5 hours will be equivalent to providing 2 hours, not 2 hours 30 minutes.
 Omitted values are assumed to be their lowest value in their normal range, except for year which defaults to 1970.
         ">
-                <Param name="number:year = 1970" />
-                <Param name="number:month = 1" />
-                <Param name="number:day = 1" />
-                <Param name="number:hour = 0" />
-                <Param name="number:minute = 0" />
-                <Param name="number:second = 0" />
-                <Param name="number:millisecond = 0" />
+                <Param name="year: number = 1970" />
+                <Param name="month: number = 1" />
+                <Param name="day: number = 1" />
+                <Param name="hour: number = 0" />
+                <Param name="minute: number = 0" />
+                <Param name="second: number = 0" />
+                <Param name="millisecond: number = 0" />
             </Overload>
         </KeyWord>
         <KeyWord name="DateTime.fromUniversalTime" func="yes">
@@ -568,13 +552,13 @@ Time units (hour, minute, second, millisecond) that are outside their normal ran
 Non-integer values are rounded down. For example, providing 2.5 hours will be equivalent to providing 2 hours, not 2 hours 30 minutes.
 Omitted values are assumed to be their lowest value in their normal range, except for year which defaults to 1970.
         ">
-                <Param name="number:year = 1970" />
-                <Param name="number:month = 1" />
-                <Param name="number:day = 1" />
-                <Param name="number:hour = 0" />
-                <Param name="number:minute = 0" />
-                <Param name="number:second = 0" />
-                <Param name="number:millisecond = 0" />
+                <Param name="year: number = 1970" />
+                <Param name="month: number = 1" />
+                <Param name="day: number = 1" />
+                <Param name="hour: number = 0" />
+                <Param name="minute: number = 0" />
+                <Param name="second: number = 0" />
+                <Param name="millisecond: number = 0" />
             </Overload>
         </KeyWord>
         <KeyWord name="DateTime.fromIsoDate" func="yes">
@@ -583,13 +567,11 @@ Returns a DateTime from an ISO 8601 date-time string in UTC time, such as those 
 
 An example ISO 8601 date-time string would be 2020-01-02T10:30:45Z, which represents January 2nd 2020 at 10:30 AM, 45 seconds.
         ">
-                <Param name="string:isoDate" />
+                <Param name="isoDate: string" />
             </Overload>
         </KeyWord>
-        <KeyWord name="debug.dumpheap" func="yes">
-            <Overload retVal="void" descr="
-Can only be called from CommandBar. Saves a Luau heap to a (luauheap_%Y%m%d-%H%M%S.json) file.
-        "></Overload>
+        <KeyWord name="debug.dumpheap()" func="yes">
+            <Overload retVal="void" descr="Can only be called from CommandBar. Saves a Luau heap to a (luauheap_%Y%m%d-%H%M%S.json) file."/>
         </KeyWord>
         <KeyWord name="debug.getconstant" func="yes">
             <Overload retVal="variant" descr="
@@ -612,7 +594,7 @@ Returns the constant at index idx in function fi or level fi.
         <KeyWord name="debug.getinfo" func="yes">
             <Overload retVal="table" descr="Returns a table of info pertaining to the lua function fi.">
                 <Param name="fi: union&lt;function, number&gt;" />
-                <Param name="w: string = 'flnSu'" />
+                <Param name="w: string = &#34;flnSu&#34;" />
             </Overload>
         </KeyWord>
         <KeyWord name="debug.getlocal" func="yes">
@@ -627,16 +609,13 @@ Returns the constant at index idx in function fi or level fi.
             </Overload>
         </KeyWord>
         <KeyWord name="debug.getmetatable" func="yes">
-            <Overload retVal="table" descr="
-Returns the metatable of the given object or nil if it does not have a metatable. 
-        ">
-                <Param name="object" />
+            <Overload retVal="table" descr="Returns the metatable of the given object or nil if it does not have a metatable. ">
+                <Param name="object: userdata" />
             </Overload>
         </KeyWord>
         <KeyWord name="debug.getproto" func="yes">
             <Overload retVal="union&lt;function, table&lt;function>&gt;" descr="
 Gets the inner function of f at index.
-
 Note if activated is true, instead it will return a table of functions. These are the instances of that function that exist within the GC.
         ">
                 <Param name="fi: union&lt;function, number&gt;" />
@@ -651,12 +630,12 @@ Returns a table containing the inner functions of function f. Note these functio
                 <Param name="f: function" />
             </Overload>
         </KeyWord>
-        <KeyWord name="debug.getregistry" func="yes">
-            <Overload retVal="table" descr="Returns the Lua registry."></Overload>
+        <KeyWord name="debug.getregistry()" func="yes">
+            <Overload retVal="table" descr="Returns the Lua registry."/>
         </KeyWord>
         <KeyWord name="debug.getstack" func="yes">
-            <Overload retVal="table" descr="Gets the method stack at level 'idx'.">
-                <Param name="idx" />
+            <Overload retVal="table" descr="Gets the method stack at level &#34;idx&#34;.">
+                <Param name="idx: int" />
             </Overload>
         </KeyWord>
         <KeyWord name="debug.getupvalue" func="yes">
@@ -673,13 +652,13 @@ Returns a table containing the inner functions of function f. Note these functio
         <KeyWord name="debug.info" func="yes">
             <Overload retVal="int" descr="
 Retrieves information about a specific function or function invocation, based on the character tag provided. See tags:
-* 'f': returns function that is running at the given level;
-* 'l': returns the field currentline;
-* 'n': returns the fields name and namewhat;
-* 'r': returns the fields ftransfer and ntransfer;
-* 'S': returns the fields source, short_src, linedefined, lastlinedefined, and what;
-* 't': returns the field istailcall;
-* 'u': returns the fields nups, nparams, and isvararg;
+* &#34;f&#34;: returns function that is running at the given level;
+* &#34;l&#34;: returns the field currentline;
+* &#34;n&#34;: returns the fields name and namewhat;
+* &#34;r&#34;: returns the fields ftransfer and ntransfer;
+* &#34;S&#34;: returns the fields source, short_src, linedefined, lastlinedefined, and what;
+* &#34;t&#34;: returns the field istailcall;
+* &#34;u&#34;: returns the fields nups, nparams, and isvararg;
         ">
                 <Param name="fi: union&lt;function, number&gt;" />
                 <Param name="tag: string" />
@@ -698,21 +677,17 @@ Returns the function object that represents the module, without evaluating that 
                 <Param name="label: string" />
             </Overload>
         </KeyWord>
-        <KeyWord name="debug.profileend" func="yes">
-            <Overload retVal="void" descr="
-Stops profiling for the most recent MicroProfiler label that debug.profilebegin() opened.">
-            </Overload>
+        <KeyWord name="debug.profileend()" func="yes">
+            <Overload retVal="void" descr="Stops profiling for the most recent MicroProfiler label that debug.profilebegin(&#34;...&#34;) opened."/>
         </KeyWord>
-        <KeyWord name="debug.resetmemorycategory" func="yes">
-            <Overload retVal="void" descr="
-Resets the tag assigned by debug.setmemorycategory() to the automatically assigned value (typically, the script name).">
-            </Overload>
+        <KeyWord name="debug.resetmemorycategory()" func="yes">
+            <Overload retVal="void" descr="Resets the tag assigned by debug.setmemorycategory() to the automatically assigned value (typically, the script name)."/>
         </KeyWord>
         <KeyWord name="debug.setconstant" func="yes">
             <Overload retVal="void" descr="Set constant idx to tuple value at level or function fi.">
                 <Param name="fi: union&lt;function, number&gt;" />
                 <Param name="idx: union&lt;string, int&gt;" />
-                <Param name="value: union&lt;number, bool, nil, string&gt;" />
+                <Param name="value: union&lt;number, boolean, nil, string&gt;" />
             </Overload>
         </KeyWord>
         <KeyWord name="debug.setlocal" func="yes">
@@ -724,19 +699,19 @@ Resets the tag assigned by debug.setmemorycategory() to the automatically assign
         </KeyWord>
         <KeyWord name="debug.setmemorycategory" func="yes">
             <Overload retVal="void" descr="
-Assigns a custom tag name to the current thread's memory category in the Developer Console. Useful for analyzing memory usage of multiple threads in the same script which would otherwise be grouped together under the same tag/name.">
+Assigns a custom tag name to the current thread&#34;s memory category in the Developer Console. Useful for analyzing memory usage of multiple threads in the same script which would otherwise be grouped together under the same tag/name.">
                 <Param name="tag: string" />
             </Overload>
         </KeyWord>
         <KeyWord name="debug.setmetatable" func="yes">
-            <Overload retVal="table" descr="Set the metatable of 'og' to 'mt'.">
+            <Overload retVal="table" descr="Set the metatable of &#34;og&#34; to &#34;mt&#34;.">
                 <Param name="og: table" />
                 <Param name="mt: table" />
             </Overload>
         </KeyWord>
         <KeyWord name="debug.setstack" func="yes">
             <Overload retVal="void" descr="
-Set the stack indice at level 'idx' to value 'val' at level or function fi.
+Set the stack indice at level &#34;idx&#34; to value &#34;val&#34; at level or function fi.
         ">
                 <Param name="fi: union&lt;function, int&gt;" />
                 <Param name="idx: int" />
@@ -762,7 +737,7 @@ Set upvalue idx to value value at level or function fi.
 Returns a string of undefined format that describes the current function call stack.
         ">
                 <Param name="thread: thread" />
-                <Param name="message: string = ''" />
+                <Param name="message: string = &#34;&#34;" />
                 <Param name="level: number = 1" />
             </Overload>
         </KeyWord>
@@ -772,9 +747,9 @@ Returns a traceback of the current function call stack as a string; in other wor
 
 The level parameter specifies what level of the call stack to consider, with 1 being the call of debug.traceback() itself, 2 being the call of the function calling debug.traceback(), and so on. See the code sample below for an example of sequential function calls.
 
-The format of the returned traceback is not defined and may change at any time; use only for debug diagnostics and error analytics. It's recommended that you never parse the return value of this function for specific information, such as script names or line numbers.
+The format of the returned traceback is not defined and may change at any time; use only for debug diagnostics and error analytics. It&#34;s recommended that you never parse the return value of this function for specific information, such as script names or line numbers.
         ">
-                <Param name="message: string = ''" />
+                <Param name="message: string = &#34;&#34;" />
                 <Param name="level: number = 1" />
             </Overload>
         </KeyWord>
@@ -805,29 +780,25 @@ Schedules a function to be executed after delayTime seconds have passed, without
             </Overload>
         </KeyWord>
         <KeyWord name="delay" func="yes">
-            <Overload retVal="void" descr="Equivalent to 'Delay'.">
+            <Overload retVal="void" descr="Equivalent to &#34;Delay&#34;.">
                 <Param name="delayTime: float" />
                 <Param name="callback: function" />
             </Overload>
         </KeyWord>
         <KeyWord name="delfile" func="yes">
-            <Overload retVal="void" descr="
-Deletes the file in the supplied path, if no file exists, it errors.
-        ">
+            <Overload retVal="void" descr="Deletes the file in the supplied path, if no file exists, it errors.">
                 <Param name="path: string" />
             </Overload>
         </KeyWord>
         <KeyWord name="delfolder" func="yes">
-            <Overload retVal="void" descr="
-Deletes the folder in the supplied path, if no folder exists, it errors.
-        ">
+            <Overload retVal="void" descr="Deletes the folder in the supplied path, if no folder exists, it errors.">
                 <Param name="path: string" />
             </Overload>
         </KeyWord>
         <KeyWord name="do" func="no" />
         <KeyWord name="DockWidgetPluginGuiInfo.new" func="yes">
             <Overload retVal="Drawing object" descr="
-        Returns a new DockWidgetPuginGuiInfo object. The DockWidgetPluginGuiInfo data type describes details for a DockWidgetPluginGui. This data type is used when constructing a PluginGui via the plugin's Plugin:CreateDockWidgetPluginGui() method. See documentation : https://create.roblox.com/docs/reference/engine/datatypes/DockWidgetPluginGuiInfo.
+Returns a new DockWidgetPuginGuiInfo object. The DockWidgetPluginGuiInfo data type describes details for a DockWidgetPluginGui. This data type is used when constructing a PluginGui via the plugin&#34;s Plugin:CreateDockWidgetPluginGui() method. See documentation : https://create.roblox.com/docs/reference/engine/datatypes/DockWidgetPluginGuiInfo.
         ">
                 <Param name="initDockState = Enum.InitialDockState.Right" />
                 <Param name="initEnabled = false" />
@@ -839,17 +810,13 @@ Deletes the folder in the supplied path, if no folder exists, it errors.
             </Overload>
         </KeyWord>
         <KeyWord name="Drawing.new" func="yes">
-            <Overload retVal="Drawing object" descr="
-        Creates a new drawing object with type. Returns the object. See documentation : https://docs.synapse.to/docs/reference/drawing_lib.html.
-        ">
+            <Overload retVal="Drawing object" descr="Creates a new drawing object with type. Returns the object. See documentation : https://docs.synapse.to/docs/reference/drawing_lib.html.">
                 <Param name="string:type" />
             </Overload>
         </KeyWord>
         <KeyWord name="Drawing.Fonts" func="no" />
         <KeyWord name="dumpstring" func="yes" >
-            <Overload retVal="string" descr="
-Returns the Synapse formatted bytecode for source string script.
-        ">
+            <Overload retVal="string" descr="Returns the Synapse formatted bytecode for source string script.">
                 <Param name="Script: string" />
             </Overload>
         </KeyWord>
@@ -876,7 +843,7 @@ Usually, error adds some information about the error position at the beginning o
             </Overload>
         </KeyWord>
         <KeyWord name="fireclickdetector" func="yes" >
-            <Overload retVal="void" descr="Fires the designated ClickDetector with provided Distance. If Distance isn't provided, it will default to 0.">
+            <Overload retVal="void" descr="Fires the designated ClickDetector with provided Distance. If Distance isn&#34;t provided, it will default to 0.">
                 <Param name="Detector: ClickDetector" />
                 <Param name="Distance: number" />
             </Overload>
@@ -902,9 +869,9 @@ Note: The ToTouch argument must have a child with class TouchTransmitter in orde
         <KeyWord name="function" func="no" />
         <KeyWord name="Faces.new" func="yes">
             <Overload retVal="Faces container" descr="
-The Faces data type contains six booleans representing whether a feature is enabled for each face (NormalId) of a Part. In other words, this contains a boolean for each axes (X/Y/Z) in both directions (positive/negative). The Handles object uses this data type to enable whether a direction has a visible handle on a Part's face.
+The Faces data type contains six booleans representing whether a feature is enabled for each face (NormalId) of a Part. In other words, this contains a boolean for each axes (X/Y/Z) in both directions (positive/negative). The Handles object uses this data type to enable whether a direction has a visible handle on a Part&#34;s face.
         ">
-                <Param name="Args: Tuple" />
+                <Param name="Args: Tuple&lt;NormalId&gt;" />
             </Overload>
         </KeyWord>
         <KeyWord name="FloatCurveKey.new" func="yes">
@@ -913,56 +880,52 @@ A time-value pair used with FloatCurve instances.
 
 The Interpolation property dictates the interpolation mode for the segment started by this key and ended by the next key on the curve. Each segment may use a different interpolation mode.
 
-The LeftTangent and RightTangent properties apply to the cubic interpolation mode and define the desired tangent (slope) at the key. Different left and right values can be used to encode discontinuities in slope at the key. Attempting to set a RightTangent value on a key that doesn't use the cubic interpolation mode will result in a runtime error. It is possible to set the LeftTangent property on any key, as it will be used should the preceding segment use cubic interpolation.
+The LeftTangent and RightTangent properties apply to the cubic interpolation mode and define the desired tangent (slope) at the key. Different left and right values can be used to encode discontinuities in slope at the key. Attempting to set a RightTangent value on a key that doesn&#34;t use the cubic interpolation mode will result in a runtime error. It is possible to set the LeftTangent property on any key, as it will be used should the preceding segment use cubic interpolation.
         ">
-                <Param name="number:time" />
-                <Param name="number:value" />
-                <Param name="Enum.KeyInterpolationMode:Interpolation" />
+                <Param name="time: number" />
+                <Param name="value: number" />
+                <Param name="Interpolation: Enum.KeyInterpolationMode" />
             </Overload>
         </KeyWord>
         <KeyWord name="Font.new" func="yes">
             <Overload retVal="Font" descr="Creates a new Font.">
-                <Param name="Content:family" />
-                <Param name="Enum.FontWeight:weight" />
-                <Param name="Enum.FontStyle:style" />
+                <Param name="family: Content" />
+                <Param name="weight: Enum.FontWeight" />
+                <Param name="weight: Enum.FontStyle" />
             </Overload>
         </KeyWord>
         <KeyWord name="Font.fromEnum" func="yes">
             <Overload retVal="Font" descr="Creates a Font from a Font value.">
-                <Param name="Font:font" />
+                <Param name="font: Font" />
             </Overload>
         </KeyWord>
         <KeyWord name="Font.fromName" func="yes">
             <Overload retVal="Font" descr="Creates a Font from a name.">
-                <Param name="string:name" />
-                <Param name="Enum.FontWeight:weight" />
-                <Param name="Enum.FontStyle:style" />
+                <Param name="name: string" />
+                <Param name="weight: Enum.FontWeight" />
+                <Param name="style: Enum.FontStyle" />
             </Overload>
         </KeyWord>
         <KeyWord name="Font.fromId" func="yes">
             <Overload retVal="Font" descr="Creates a Font from a name.">
-                <Param name="number:id" />
-                <Param name="Enum.FontWeight:weight" />
-                <Param name="Enum.FontStyle:style" />
+                <Param name="id: number" />
+                <Param name="weight: Enum.FontWeight" />
+                <Param name="style: Enum.FontStyle" />
             </Overload>
         </KeyWord>
-        <KeyWord name="gcinfo" func="yes">
+        <KeyWord name="gcinfo()" func="yes">
             <Overload retVal="number" descr="
 Returns the total memory heap size in kilobytes. The number reflects the current heap consumption from the operating system perspective, which fluctuates over time as garbage collector frees objects.
-">
-            </Overload>
+"/>
         </KeyWord>
-        <KeyWord name="getactors" func="yes">
-            <Overload retVal="table" descr="Returns a table of all actors in the current game.">
-            </Overload>
+        <KeyWord name="getactors()" func="yes">
+            <Overload retVal="table" descr="Returns a table of all actors in the current game."/>
         </KeyWord>
-        <KeyWord name="getcallingscript" func="yes">
-            <Overload retVal="union&lt;LocalScript,ModuleScript,nil&gt;" descr="Gets the script that is calling this function.">
-            </Overload>
+        <KeyWord name="getcallingscript()" func="yes">
+            <Overload retVal="union&lt;LocalScript,ModuleScript,nil&gt;" descr="Gets the script that is calling this function."/>
         </KeyWord>
-        <KeyWord name="get_calling_script" func="yes">
-            <Overload retVal="union&lt;LocalScript,ModuleScript,nil&gt;" descr="Gets the script that is calling this function.">
-            </Overload>
+        <KeyWord name="get_calling_script()" func="yes">
+            <Overload retVal="union&lt;LocalScript,ModuleScript,nil&gt;" descr="Gets the script that is calling this function."/>
         </KeyWord>
         <KeyWord name="getcallstack" func="yes">
             <Overload retVal="unknown" descr="unknown.">
@@ -972,15 +935,16 @@ Returns the total memory heap size in kilobytes. The number reflects the current
         </KeyWord>
         <KeyWord name="getconnections" func="yes">
             <Overload retVal="table" descr="Gets a list of connections to the specified signal.">
+                <Param name="signal: RBXScriptSignal" />
             </Overload>
         </KeyWord>
-        <KeyWord name="debug.getconstant" func="yes">
+        <KeyWord name="getconstant" func="yes">
             <Overload retVal="variant" descr="Similar to debug.getconstant.">
                 <Param name="fi: union&lt;function, number&gt;" />
                 <Param name="idx: int" />
             </Overload>
         </KeyWord>
-        <KeyWord name="debug.getconstants" func="yes">
+        <KeyWord name="getconstants" func="yes">
             <Overload retVal="table" descr="Similar to debug.getconstants.">
                 <Param name="fi: union&lt;function, number&gt;" />
             </Overload>
@@ -992,31 +956,28 @@ Returns the current environment in use by the caller, as a dictionary.
 If provided with a function, the environment of the function will be returned.
 If provided with an integer, getfenv() will provide the environment of the function at the provided stack level: Level 1 is the function calling getfenv(). If stack is 0, getfenv() returns the global environment of the current script. When using getfenv() to get the current environment of a script, it will return the same table every time within the specific thread. 
         ">
-                <Param name="stack: variant" />
+                <Param name="stack: variant&lt;function, number&gt;" />
             </Overload>
         </KeyWord>
         <KeyWord name="getmetatable" func="yes">
             <Overload retVal="variant" descr="
-If object does not have a metatable, returns nil. Otherwise, if the object's metatable has a '__metatable' field, returns the associated value. Otherwise, returns the metatable of the given object. 
+If object does not have a metatable, returns nil. Otherwise, if the object&#34;s metatable has a &#34;__metatable&#34; field, returns the associated value. Otherwise, returns the metatable of the given object. 
         ">
-                <Param name="t: variant" />
+                <Param name="t: variant&lt;table, userdata&gt;" />
             </Overload>
         </KeyWord>
-        <KeyWord name="getnamecallmethod" func="yes">
-            <Overload retVal="string" descr="
-Returns the namecall method if the function is called in an __namecall metatable hook.
-        ">
-            </Overload>
+        <KeyWord name="getnamecallmethod()" func="yes">
+            <Overload retVal="string" descr="Returns the namecall method if the function is called in an __namecall metatable hook."/>
         </KeyWord>
         <KeyWord name="getgc" func="yes">
             <Overload retVal="table" descr="
 Returns all functions and userdata values within the GC. Passing true will also return tables.
             ">
-                <Param name="include_tables: boolean?" />
+                <Param name="include_tables: boolean?"/>
             </Overload>
         </KeyWord>
-        <KeyWord name="getgenv" func="yes">
-            <Overload retVal="table" descr="Returns the game global environment."></Overload>
+        <KeyWord name="getgenv()" func="yes">
+            <Overload retVal="table" descr="Returns the game global environment."/>
         </KeyWord>
         <KeyWord name="gethiddenprop" func="yes">
             <Overload retVal="variant" descr="Returns the hidden property Property from Object. Errors if the property does not exist.">
@@ -1043,7 +1004,7 @@ Returns all functions and userdata values within the GC. Passing true will also 
         <KeyWord name="getinfo" func="yes">
             <Overload retVal="table" descr="Similar to debug.getinfo.">
                 <Param name="fi: union&lt;function,number&gt;" />
-                <Param name="tag: string = 'flnSu'" />
+                <Param name="tag: string = &#34;flnSu&#34;" />
             </Overload>    
         </KeyWord>
         <KeyWord name="getinstancefromstate" func="yes">
@@ -1053,16 +1014,16 @@ Returns all functions and userdata values within the GC. Passing true will also 
                 <Param name="state: state" />
             </Overload>
         </KeyWord>
-        <KeyWord name="getinstances" func="yes">
+        <KeyWord name="getinstances()" func="yes">
             <Overload retVal="table" descr="Returns a list of all instances within the game."/>
         </KeyWord>
-        <KeyWord name="get_instances" func="yes">
+        <KeyWord name="get_instances()" func="yes">
             <Overload retVal="table" descr="A seperate pointer to getinstances"/>
         </KeyWord>
-        <KeyWord name="getloadedmodules" func="yes">
+        <KeyWord name="getloadedmodules()" func="yes">
             <Overload retVal="table" descr="Returns all ModuleScripts loaded in the game."/>
         </KeyWord>
-        <KeyWord name="get_loaded_modules" func="yes">
+        <KeyWord name="get_loaded_modules()" func="yes">
             <Overload retVal="table" descr="A seperate pointer to getloadedmodules."/>
         </KeyWord>
         <KeyWord name="getlocal" func="yes">
@@ -1081,13 +1042,11 @@ Returns all functions and userdata values within the GC. Passing true will also 
                 <Param name="script: union&lt;LocalScript,ModuleScript&gt;" />
             </Overload>
         </KeyWord>
-        <KeyWord name="getnilinstances" func="yes">
-            <Overload retVal="table" descr="Returns a list of all instances parented to nil within the game.">
-            </Overload>
+        <KeyWord name="getnilinstances()" func="yes">
+            <Overload retVal="table" descr="Returns a list of all instances parented to nil within the game."/>
         </KeyWord>
-        <KeyWord name="get_nil_instances" func="yes">
-            <Overload retVal="table" descr="A sepearate pointer to getnilinstances.">
-            </Overload>
+        <KeyWord name="get_nil_instances()" func="yes">
+            <Overload retVal="table" descr="A sepearate pointer to getnilinstances."/>
         </KeyWord>
         <KeyWord name="getpcdprop" func="yes">
             <Overload retVal="unknown" descr="unknown">
@@ -1125,18 +1084,18 @@ Returns dictionary containing all properties of the given instance.
             </Overload>
         </KeyWord>
         <KeyWord name="getrawmetatable" func="yes">
-            <Overload retVal="table" descr="Retrieve the metatable of value irregardless of value's metatable's __metatable field. Returns nil if it doesn't exist.">
+            <Overload retVal="table" descr="Retrieve the metatable of value irregardless of value&#34;s metatable&#34;s __metatable field. Returns nil if it doesn&#34;t exist.">
                 <Param name="value: table" />
             </Overload>
         </KeyWord>
-        <KeyWord name="getreg" func="yes">
-            <Overload retVal="table" descr="Returns the Lua registry."></Overload>
+        <KeyWord name="getreg()" func="yes">
+            <Overload retVal="table" descr="Returns the Lua registry."/>
         </KeyWord>
-        <KeyWord name="getrenv" func="yes">
-            <Overload retVal="table" descr="Returns the Roblox global environment."></Overload>
+        <KeyWord name="getrenv()" func="yes">
+            <Overload retVal="table" descr="Returns the Roblox global environment."/>
         </KeyWord>
-        <KeyWord name="getrenv().debug.getmemorycategory" func="yes">
-            <Overload retVal="variant" descr="Returns the memory category of the LocalScript"></Overload>
+        <KeyWord name="getrenv().debug.getmemorycategory()" func="yes">
+            <Overload retVal="variant" descr="Returns the memory category of the LocalScript"/>
         </KeyWord>
         <KeyWord name="getscriptclosure" func="yes">
             <Overload retVal="function" descr="
@@ -1150,12 +1109,11 @@ Returns a SHA384 hash of the scripts bytecode. You can use this to detect change
                 <Param name="script: union&lt;LocalScript,ModuleScript&gt;" />
             </Overload>
         </KeyWord>
-        <KeyWord name="getscripts" func="yes">
-            <Overload retVal="table" descr="Returns a list of all scripts within the game.">
-            </Overload>
+        <KeyWord name="getscripts()" func="yes">
+            <Overload retVal="table" descr="Returns a list of all scripts within the game."/>
         </KeyWord>
-        <KeyWord name="get_scripts" func="yes">
-            <Overload retVal="table" descr="A separate pointer to getscripts."></Overload>
+        <KeyWord name="get_scripts()" func="yes">
+            <Overload retVal="table" descr="A separate pointer to getscripts."/>
         </KeyWord>
         <KeyWord name="getsenv" func="yes">
             <Overload retVal="table" descr="
@@ -1172,13 +1130,13 @@ Gets a list of special properties for MeshParts, UnionOperations, and Terrain in
             </Overload>
         </KeyWord>
         <KeyWord name="getstack" func="yes">
-            <Overload retVal="table" descr="Gets the method stack at level 'idx'.">
+            <Overload retVal="table" descr="Gets the method stack at level &#34;idx&#34;.">
                 <Param name="idx" />
             </Overload>
         </KeyWord>
         <KeyWord name="getstateenv" func="yes">
             <Overload retVal="table" descr="
-(broken)Returns the environment of 'state' that MUST HAVE been obatined from getstates().
+(broken)Returns the environment of &#34;state&#34; that MUST HAVE been obatined from getstates().
         ">
                 <Param name="state: state" />
             </Overload>
@@ -1191,7 +1149,7 @@ Gets a list of special properties for MeshParts, UnionOperations, and Terrain in
             <Overload retVal="Content" descr="
 Returns a Content string that can be used as a fake Asset ID for GUI elements. Please note this will only affect your client.
 
-Note: Certain instances only work with specific file types. For example, VideoFrame's only work with .webm encoded videos.
+Note: Certain instances only work with specific file types. For example, VideoFrame&#34;s only work with .webm encoded videos.
         ">
                 <Param name="path: string" />
             </Overload>
@@ -1207,9 +1165,8 @@ Note: Certain instances only work with specific file types. For example, VideoFr
                 <Param name="fi: union&lt;function, number&gt;" />
             </Overload>
         </KeyWord>
-        <KeyWord name="getvirtualinputmanager" func="yes">
-            <Overload retVal="VirtualInputManager" descr="Returns the VirtualInputManager service.">
-            </Overload>
+        <KeyWord name="getvirtualinputmanager()" func="yes">
+            <Overload retVal="VirtualInputManager" descr="Returns the VirtualInputManager service."/>
         </KeyWord>
         <KeyWord name="hookfunc" func="yes">
             <Overload retVal="function" descr="Copy of hookfunction.">
@@ -1227,7 +1184,7 @@ Hooks function old, replacing it with the function hook. The old function is ret
         </KeyWord>
         <KeyWord name="hookmetamethod" func="yes">
             <Overload retVal="function" descr="
-Hooks the metamethod passed in the object's metatable with hook. A function to call the original metamethod is returned, you must use this function in order to call the original metamethod.
+Hooks the metamethod passed in the object&#34;s metatable with hook. A function to call the original metamethod is returned, you must use this function in order to call the original metamethod.
 
 This function will error if an object without a metatable is passed or a invalid metamethod is passed.
         ">
@@ -1239,8 +1196,7 @@ This function will error if an object without a metatable is passed or a invalid
         <KeyWord name="if" func="no" />
         <KeyWord name="in" func="no" />
         <KeyWord name="identifyexecutor" func="yes">
-            <Overload retVal="string" descr="Returns information about the executor.">
-            </Overload>
+            <Overload retVal="string" descr="Returns information about the executor."/>
         </KeyWord>
         <KeyWord name="Instance.new" func="yes">
             <Overload retVal="Instance" descr="
@@ -1265,12 +1221,12 @@ Returns three values: an iterator function, the table t and the number 0. Each t
             </Overload>
         </KeyWord>
         <KeyWord name="isactor" func="yes">
-            <Overload retVal="boolean" descr="Returns true if 'obj' is an Actor.">
+            <Overload retVal="boolean" descr="Returns true if &#34;obj&#34; is an Actor.">
                 <Param name="obj: variant" />
             </Overload>
         </KeyWord>
         <KeyWord name="isconnectionenabled" func="yes">
-            <Overload retVal="boolean" descr="Returns true if 'con' is connected to an Instance.">
+            <Overload retVal="boolean" descr="Returns true if &#34;con&#34; is connected to an Instance.">
                 <Param name="con: RBXScriptSignal" />
             </Overload>
         </KeyWord>
@@ -1289,22 +1245,19 @@ Returns three values: an iterator function, the table t and the number 0. Each t
                 <Param name="f: function" />
             </Overload>
         </KeyWord>
-        <KeyWord name="isluau" func="yes">
-            <Overload retVal="boolean" descr="Returns true if the game is running luau.">
-            </Overload>
+        <KeyWord name="isluau()" func="yes">
+            <Overload retVal="boolean" descr="Returns true if the game is running luau."/>
         </KeyWord>
         <KeyWord name="is_protosmasher_caller" func="yes">
-            <Overload retVal="boolean" descr="Returns whether the 'f' is made by the script executor.">
+            <Overload retVal="boolean" descr="Returns whether the &#34;f&#34; is made by the script executor.">
                 <Param name="f: function" />
             </Overload>
         </KeyWord>
-        <KeyWord name="is_protosmasher_closure" func="yes">
-            <Overload retVal="boolean" descr="Returns whether the current closure is made by the script executor.">
-            </Overload>
+        <KeyWord name="is_protosmasher_closure()" func="yes">
+            <Overload retVal="boolean" descr="Returns whether the current closure is made by the script executor."/>
         </KeyWord>
-        <KeyWord name="is_redirection_enabled" func="yes">
-            <Overload retVal="unknown" descr="unknown">
-            </Overload>
+        <KeyWord name="is_redirection_enabled()" func="yes">
+            <Overload retVal="boolean" descr="unknown"/>
         </KeyWord>
         <KeyWord name="is_synapse_function" func="yes">
             <Overload retVal="boolean" descr="Similar to is_protosmasher_caller.">
@@ -1316,12 +1269,11 @@ Returns three values: an iterator function, the table t and the number 0. Each t
                 <Param name="Part: BasePart" />
             </Overload>
         </KeyWord>
-        <KeyWord name="isrbxactive" func="yes">
-            <Overload retVal="boolean" descr="Returns true if the rbx client is active.">
-            </Overload>
+        <KeyWord name="isrbxactive()" func="yes">
+            <Overload retVal="boolean" descr="Returns true if the rbx client is active."/>
         </KeyWord>
         <KeyWord name="isreadonly" func="yes">
-            <Overload retVal="boolean" descr="Returns t's read-only condition.">
+            <Overload retVal="boolean" descr="Returns t&#34;s read-only condition.">
                 <Param name="t: table" />
             </Overload>
         </KeyWord>
@@ -1330,11 +1282,10 @@ Returns three values: an iterator function, the table t and the number 0. Each t
                 <Param name="obj: BasePart" />
             </Overload>
         </KeyWord>
-        <KeyWord name="iswindowactive" func="yes">
+        <KeyWord name="iswindowactive()" func="yes">
             <Overload retVal="boolean" descr="
 Returns if the main window is in focus. This must return true for any other mouse/keyboard function to work.
-        ">
-            </Overload>
+        "/>
         </KeyWord>
         <KeyWord name="keypress" func="yes">
             <Overload retVal="void" descr="
@@ -1372,12 +1323,12 @@ Similar to load, but gets the chunk from the given string. To load and run a giv
         </KeyWord>
         <KeyWord name="local" func="no" />
         <KeyWord name="make_readonly" func="yes">
-            <Overload retVal="void" descr="Sets t's readonly state to true.">
+            <Overload retVal="void" descr="Sets t&#34;s readonly state to true.">
                 <Param name="t: table" />
             </Overload>
         </KeyWord>
         <KeyWord name="make_writable" func="yes">
-            <Overload retVal="void" descr="Sets t's readonly state to false.">
+            <Overload retVal="void" descr="Sets t&#34;s readonly state to false.">
                 <Param name="t: table" />
             </Overload>
         </KeyWord>
@@ -1388,22 +1339,22 @@ Similar to load, but gets the chunk from the given string. To load and run a giv
         </KeyWord>
         <KeyWord name="math.abs" func="yes">
             <Overload retVal="float" descr="Returns the absolute value of x.">
-                <Param name="x" />
+                <Param name="x: number" />
             </Overload>
         </KeyWord>
         <KeyWord name="math.acos" func="yes">
             <Overload retVal="float" descr="Returns the arc cosine of x (in radians).">
-                <Param name="x" />
+                <Param name="x: number" />
             </Overload>
         </KeyWord>
         <KeyWord name="math.asin" func="yes">
             <Overload retVal="float" descr="Returns the arc sine of x (in radians).">
-                <Param name="x" />
+                <Param name="x: number" />
             </Overload>
         </KeyWord>
         <KeyWord name="math.atan" func="yes">
             <Overload retVal="float" descr="Returns the arc tangent of x (in radians).">
-                <Param name="x" />
+                <Param name="x: number" />
             </Overload>
         </KeyWord>
         <KeyWord name="math.atan2" func="yes">
@@ -1411,53 +1362,53 @@ Similar to load, but gets the chunk from the given string. To load and run a giv
 Returns the arc tangent of y/x (in radians), but uses the signs of both parameters to 
 find the quadrant of the result. (It also handles correctly the case of x being zero.) 
         ">
-                <Param name="y" />
-                <Param name="x" />
+                <Param name="y: number" />
+                <Param name="x: number" />
             </Overload>
         </KeyWord>
         <KeyWord name="math.ceil" func="yes">
             <Overload retVal="float" descr="Returns the smallest integer larger than or equal to x.">
-                <Param name="x" />
+                <Param name="x: number" />
             </Overload>
         </KeyWord>
         <KeyWord name="math.clamp" func="yes">
             <Overload retVal="float" descr="Returns a number between min and max, inclusive.">
-                <Param name="x" />
-                <Param name="min" />
-                <Param name="max" />
+                <Param name="x: number" />
+                <Param name="min: number" />
+                <Param name="max: number" />
             </Overload>
         </KeyWord>
         <KeyWord name="math.cos" func="yes">
             <Overload retVal="float" descr="Returns the cosine of x (assumed to be in radians).">
-                <Param name="x" />
+                <Param name="x: number" />
             </Overload>
         </KeyWord>
         <KeyWord name="math.cosh" func="yes">
             <Overload retVal="float" descr="Returns the hyperbolic cosine of x. ">
-                <Param name="x" />
+                <Param name="x: number" />
             </Overload>
         </KeyWord>
         <KeyWord name="math.deg" func="yes">
             <Overload retVal="float" descr="Returns the angle x (given in radians) in degrees. ">
-                <Param name="x" />
+                <Param name="x: number" />
             </Overload>
         </KeyWord>
         <KeyWord name="math.exp" func="yes">
             <Overload retVal="float" descr="Returns the value ex. ">
-                <Param name="x" />
+                <Param name="x: number" />
             </Overload>
         </KeyWord>
         <KeyWord name="math.floor" func="yes">
             <Overload retVal="float" descr="Returns the largest integer smaller than or equal to x. ">
-                <Param name="x" />
+                <Param name="x: number" />
             </Overload>
         </KeyWord>
         <KeyWord name="math.fmod" func="yes">
             <Overload retVal="float" descr="
 Returns the remainder of the division of x by y that rounds the quotient towards zero. 
         ">
-                <Param name="x" />
-                <Param name="y" />
+                <Param name="x: number" />
+                <Param name="y: number" />
             </Overload>
         </KeyWord>
         <KeyWord name="math.frexp" func="yes">
@@ -1465,7 +1416,7 @@ Returns the remainder of the division of x by y that rounds the quotient towards
 Returns m and e such that x = m2e, e is an integer and the absolute value of m is in 
 the range [0.5, 1) (or zero when x is zero). 
         ">
-                <Param name="x" />
+                <Param name="x: number" />
             </Overload>
         </KeyWord>
         <KeyWord name="math.huge" func="no" />
@@ -1477,31 +1428,31 @@ the range [0.5, 1) (or zero when x is zero).
         </KeyWord>
         <KeyWord name="math.log" func="yes">
             <Overload retVal="float" descr="Returns the natural logarithm of x. ">
-                <Param name="x" />
+                <Param name="x: number" />
             </Overload>
         </KeyWord>
         <KeyWord name="math.log10" func="yes">
             <Overload retVal="float" descr="Returns the base-10 logarithm of x. ">
-                <Param name="x" />
+                <Param name="x: number" />
             </Overload>
         </KeyWord>
         <KeyWord name="math.max" func="yes">
             <Overload retVal="float" descr="Returns the maximum value among its arguments. ">
-                <Param name="x" />
-                <Param name="..." />
+                <Param name="x: number" />
+                <Param name="nums: Tuple&lt;number&gt;" />
             </Overload>
         </KeyWord>
         <KeyWord name="math.min" func="yes">
             <Overload retVal="float" descr="Returns the minimum value among its arguments. ">
-                <Param name="x" />
-                <Param name="..." />
+                <Param name="x: number" />
+                <Param name="nums: Tuple&lt;number&gt;" />
             </Overload>
         </KeyWord>
         <KeyWord name="math.modf" func="yes">
             <Overload retVal="float" descr="
 Returns two numbers, the integral part of x and the fractional part of x. 
         ">
-                <Param name="x" />
+                <Param name="x: number" />
             </Overload>
         </KeyWord>
         <KeyWord name="math.noise" func="yes">
@@ -1516,9 +1467,9 @@ The function uses a perlin noise algorithm to assign fixed values to coordinates
 
 If x, y and z are all integers, the return value will be 0. For fractional values of x, y and z, the return value will gradually fluctuate between -0.5 and 0.5. For coordinates that are close to each other, the return values will also be close to each other.
         ">
-                <Param name="x" />
-                <Param name="y" />
-                <Param name="z" />
+                <Param name="x: number" />
+                <Param name="y: number" />
+                <Param name="z: number" />
             </Overload>
         </KeyWord>
         <KeyWord name="math.pi" func="no" />
@@ -1526,13 +1477,13 @@ If x, y and z are all integers, the return value will be 0. For fractional value
             <Overload retVal="float" descr="
 Returns xy. (You can also use the expression x^y to compute this value.) 
         ">
-                <Param name="x" />
-                <Param name="y" />
+                <Param name="x: number" />
+                <Param name="y: number" />
             </Overload>
         </KeyWord>
         <KeyWord name="math.rad" func="yes">
             <Overload retVal="float" descr="Returns the angle x (given in degrees) in radians.">
-                <Param name="x" />
+                <Param name="x: number" />
             </Overload>
         </KeyWord>
         <KeyWord name="math.random" func="yes">
@@ -1545,42 +1496,43 @@ range [0,1). When called with an integer number m, math.random returns a uniform
 pseudo-random integer in the range [1, m]. When called with two integer numbers m and 
 n, math.random returns a uniform pseudo-random integer in the range [m, n]. 
         ">
-                <Param name="[m [, n]]" />
+                <Param name="min: number = 0" />
+                <Param name="max: number = 1" />
             </Overload>
         </KeyWord>
         <KeyWord name="math.randomseed" func="yes">
             <Overload retVal="void" descr="
-Sets x as the 'seed' for the pseudo-random generator: equal seeds produce equal 
+Sets x as the &#34;seed&#34; for the pseudo-random generator: equal seeds produce equal 
 sequences of numbers. 
         ">
-                <Param name="x" />
+                <Param name="x: number" />
             </Overload>
         </KeyWord>
         <KeyWord name="math.sin" func="yes">
             <Overload retVal="float" descr="Returns the sine of x (assumed to be in radians">
-                <Param name="x" />
+                <Param name="x: number" />
             </Overload>
         </KeyWord>
         <KeyWord name="math.sinh" func="yes">
             <Overload retVal="float" descr="Returns the hyperbolic sine of x. ">
-                <Param name="x" />
+                <Param name="x: number" />
             </Overload>
         </KeyWord>
         <KeyWord name="math.sqrt" func="yes">
             <Overload retVal="float" descr="
 Returns the square root of x. (You can also use the expression x^0.5 to compute this value.) 
         ">
-                <Param name="x" />
+                <Param name="x: number" />
             </Overload>
         </KeyWord>
         <KeyWord name="math.tan" func="yes">
             <Overload retVal="float" descr="Returns the tangent of x (assumed to be in radians).">
-                <Param name="x" />
+                <Param name="x: number" />
             </Overload>
         </KeyWord>
         <KeyWord name="math.tanh" func="yes">
             <Overload retVal="float" descr="Returns the hyperbolic tangent of x.">
-                <Param name="x" />
+                <Param name="x: number" />
             </Overload>
         </KeyWord>
         <KeyWord name="messagebox" func="yes">
@@ -1599,33 +1551,27 @@ Creates a message box with parameters text, caption and style. See style: https:
                 <Param name="uint: flags" />
             </Overload>
         </KeyWord>
-        <KeyWord name="mouse1click" func="yes">
-            <Overload retVal="void" descr="Simulates a full left mouse button press.">
-            </Overload>
+        <KeyWord name="mouse1click()" func="yes">
+            <Overload retVal="void" descr="Simulates a full left mouse button press."/>
         </KeyWord>
-        <KeyWord name="mouse1press" func="yes">
-            <Overload retVal="void" descr="Simulates a left mouse button press without release.">
-            </Overload>
+        <KeyWord name="mouse1press()" func="yes">
+            <Overload retVal="void" descr="Simulates a left mouse button press without release."/>
         </KeyWord>
-        <KeyWord name="mouse1release" func="yes">
-            <Overload retVal="void" descr="Simulates a left mouse button release.">
-            </Overload>
+        <KeyWord name="mouse1release()" func="yes">
+            <Overload retVal="void" descr="Simulates a left mouse button release."/>
         </KeyWord>
-       <KeyWord name="mouse2click" func="yes">
-            <Overload retVal="void" descr="Simulates a full right mouse button press.">
-            </Overload>
+       <KeyWord name="mouse2click()" func="yes">
+            <Overload retVal="void" descr="Simulates a full right mouse button press."/>
         </KeyWord>
-        <KeyWord name="mouse2press" func="yes">
-            <Overload retVal="void" descr="Simulates a right mouse button press without release.">
-            </Overload>
+        <KeyWord name="mouse2press()" func="yes">
+            <Overload retVal="void" descr="Simulates a right mouse button press without release."/>
         </KeyWord>
-        <KeyWord name="mouse2release" func="yes">
-            <Overload retVal="void" descr="Simulates a right mouse button release.">
-            </Overload>
+        <KeyWord name="mouse2release()" func="yes">
+            <Overload retVal="void" descr="Simulates a right mouse button release."/>
         </KeyWord>
         <KeyWord name="mousemoveabs" func="yes">
             <Overload retVal="void" descr="
-Move's your mouse to the x and y coordinates in pixels from topleft of the main window.
+Move&#34;s your mouse to the x and y coordinates in pixels from topleft of the main window.
         ">
                 <Param name="x: number" />
                 <Param name="y: number" />
@@ -1650,8 +1596,8 @@ Returns the first key/value pair in the array. If a lastKey argument was specifi
 
 The behavior of next is undefined if, during the traversal, you assign any value to a non-existent field in the table. You may, however, modify existing fields. In particular, you may clear existing fields.
         ">
-                <Param name="table:t" />
-                <Param name="variant:lastKey" />
+                <Param name="t: table" />
+                <Param name="lastKey: variant" />
             </Overload>
         </KeyWord>
         <KeyWord name="newcclosure" func="yes">
@@ -1676,25 +1622,23 @@ The NumberSequence data type represents a series of number values from 0 to 1. T
             <Overload retVal="NumberSequenceKeypoint" descr="
 Returns a keypoint with the specified time, value, (and envelope).
         ">
-                <Param name="number:time" />
-                <Param name="number:value" />
-                <Param name="number:envelope?" />
+                <Param name="time: number" />
+                <Param name="value: number" />
+                <Param name="envelope: number?" />
             </Overload>
         </KeyWord>
         <KeyWord name="NumberRange.new" func="yes">
             <Overload retVal="num,num" descr="
 Returns a new NumberRange with the provided minimum and maximum. The minimum must be less than or equal to maximum.
         ">
-                <Param name="min" />
-                <Param name="max = min" />
+                <Param name="min: number" />
+                <Param name="max: number = min" />
             </Overload>
         </KeyWord>
         <KeyWord name="not" func="no" />
         <KeyWord name="or" func="no" />
         <KeyWord name="os.clock" func="yes">
-            <Overload retVal="float" descr="
-Returns an approximation of the amount in seconds of CPU time used by the program. 
-        "></Overload>
+            <Overload retVal="float" descr="Returns an approximation of the amount in seconds of CPU time used by the program."/>
         </KeyWord>
         <KeyWord name="os.date" func="yes">
             <Overload retVal="string" descr="
@@ -1703,8 +1647,8 @@ Returns a string or a table containing date and time, formatted according to the
 If the time argument is present, this is the time to be formatted (see the os.time function 
 for a description of this value). Otherwise, date formats the current time.
 
-If format starts with '!', then the date is formatted in Coordinated Universal Time. After this 
-optional character, if format is the string '*t', then date returns a table with the following fields: 
+If format starts with &#34;!&#34;, then the date is formatted in Coordinated Universal Time. After this 
+optional character, if format is the string &#34;*t&#34;, then date returns a table with the following fields: 
 year (four digits), 
 month (1--12), 
 day (1--31), 
@@ -1715,13 +1659,14 @@ wday (weekday, Sunday is 1),
 yday (day of the year), and 
 isdst (daylight saving flag, a boolean).
 
-If format is not '*t', then date returns the date as a string, formatted according to the same 
+If format is not &#34;*t&#34;, then date returns the date as a string, formatted according to the same 
 rules as the C function strftime.
 
 When called without arguments, date returns a reasonable date and time representation that 
-depends on the host system and on the current locale (that is, os.date() is equivalent to os.date('%c')). 
+depends on the host system and on the current locale (that is, os.date() is equivalent to os.date(&#34;%c&#34;)). 
         ">
-                <Param name="[format [, time]]" />
+                <Param name="format: string" />
+                <Param name="time: number" />
             </Overload>
         </KeyWord>
         <KeyWord name="os.difftime" func="yes">
@@ -1729,8 +1674,8 @@ depends on the host system and on the current locale (that is, os.date() is equi
 Returns the number of seconds from time t1 to time t2. In POSIX, Windows, and some other systems, 
 this value is exactly t2-t1. 
         ">
-                <Param name="t2" />
-                <Param name="t1" />
+                <Param name="t2: table" />
+                <Param name="t1: table" />
             </Overload>
         </KeyWord>
         <KeyWord name="os.time" func="yes">
@@ -1740,11 +1685,11 @@ by the given table. This table must have fields year, month, and day, and may ha
 and isdst (for a description of these fields, see the os.date function).
 
 The returned value is a number, whose meaning depends on your system. In POSIX, Windows, and some other 
-systems, this number counts the number of seconds since some given start time (the 'epoch'). 
+systems, this number counts the number of seconds since some given start time (the &#34;epoch&#34;). 
 In other systems, the meaning is not specified, and the number returned by time can be used only as an 
 argument to date and difftime. 
         ">
-                <Param name="[table]" />
+                <Param name="t: table" />
             </Overload>
         </KeyWord>
         <KeyWord name="OverlapParams.new" func="yes">
@@ -1759,16 +1704,16 @@ Unlike most data types in Luau, you can change all of the members of OverlapPara
             <Overload retVal="function,table" descr="
 Returns an iterator function which iterates over the input table via a linked list with keys. Calling format is equivalent to ipairs.
         ">
-                <Param name="table" />
+                <Param name="t: table" />
             </Overload>
         </KeyWord>
         <KeyWord name="PathWaypointAction.new" func="yes">
             <Overload retVal="PathWaypointAction object" descr="
 The PathWaypoint data type constructed by a PathWaypointAction action, Vector3 position, and string label which is used by the PathfindingService to create points along a generated path.
         ">
-                <Param name="Vector3:position" />
-                <Param name="Enum.PathWaypointAction:action" />
-                <Param name="string" />
+                <Param name="position: Vector3" />
+                <Param name="action: Enum.PathWaypointAction" />
+                <Param name="label: string" />
             </Overload>
         </KeyWord>
         <KeyWord name="pcall" func="yes">
@@ -1779,8 +1724,8 @@ Its first result is the status code (a boolean), which is true if the call succe
 errors. In such case, pcall also returns all results from the call, after this first result. 
 In case of any error, pcall returns false plus the error message. 
         ">
-                <Param name="function:f" />
-                <Param name="..." />
+                <Param name="f: function" />
+                <Param name="args: Tuple&lt;variant&gt;" />
             </Overload>
         </KeyWord>
         <KeyWord name="PhysicalProperties.new" func="yes">
@@ -1795,20 +1740,19 @@ PhysicalProperties also provides weightings properties, ElasticityWeight and Fri
 Although the formula above refers to the Friction and FrictionWeight of two parts, A and B, the formula is used in the same manner when determining Elasticity. Generally, when the weight of A is much greater than that of B, the actual value will be closer to A. If the weights are similar, the actual value will be close to the midpoint between their individual values.
         ">
                 <Param name="union&lt;Enum.Material:material, number:density&gt;" />
-                <Param name="number:friction?" />
-                <Param name="number:elasticity?" />
-                <Param name="number:frictionWeight?" />
-                <Param name="number:elasticityWeight?" />
+                <Param name="friction: number?" />
+                <Param name="elasticity: number?" />
+                <Param name="frictionWeight: number?" />
+                <Param name="elasticityWeight: number?" />
             </Overload>
         </KeyWord>
         <KeyWord name="PluginDrag.new" func="yes">
-            <Overload retVal="PluginDrag" descr="drag object for plugins (?)"></Overload>
+            <Overload retVal="PluginDrag" descr="drag object for plugins (?)"/>
         </KeyWord>
         <KeyWord name="PluginManager" func="yes">
             <Overload retVal="PluginManager" descr="
-        Returns the PluginManager which is a deprecated singleton that was previously required to create plugins. It still has applicable uses, such as if you need to create a Plugin object from Roblox Studio's command bar.
-            ">
-            </Overload>
+        Returns the PluginManager which is a deprecated singleton that was previously required to create plugins. It still has applicable uses, such as if you need to create a Plugin object from Roblox Studio&#34;s command bar.
+            "/>
         </KeyWord>
         <KeyWord name="print" func="yes">
             <Overload retVal="void" descr="
@@ -1816,7 +1760,7 @@ Receives any number of arguments, and prints their values to stdout, using the t
 function to convert them to strings. print is not intended for formatted output, but only 
 as a quick way to show a value, typically for debugging. For formatted output, use string.format. 
         ">
-                <Param name="args: Tuple" />
+                <Param name="args: Tuple&lt;variant&gt;" />
             </Overload>
         </KeyWord>
         <KeyWord name="printconsole" func="yes">
@@ -1831,22 +1775,22 @@ Prints message into the internal and integrated console with RGB value. To view 
         </KeyWord>
         <KeyWord name="printidentity" func="yes">
             <Overload retVal="void" descr="
-Prints Current identity is [ID] to the output, where [ID] corresponds to the current th's security context level.
+Prints Current identity is [ID] to the output, where [ID] corresponds to the current th&#34;s security context level.
         ">
-                <Param name="string:prefix = 'Current identity is'" />
+                <Param name="prefix: string = &#34;Current identity is&#34;" />
             </Overload>
         </KeyWord>
         <KeyWord name="Random.new" func="yes">
             <Overload retVal="pseudorandom generator" descr="
 Returns a new Random object. If the seed parameter is not specified, it will use a seed pulled from an internal entropy source.
         ">
-                <Param name="number:seed" />
+                <Param name="seed: number" />
             </Overload>
         </KeyWord>
         <KeyWord name="Ray.new" func="yes">
             <Overload retVal="boolean" descr="Returns a Ray with the given Origin and Direction.">
-                <Param name="Vector3:origin" />
-                <Param name="Vector3:direction" />
+                <Param name="origin: Vector3" />
+                <Param name="direction: Vector3" />
             </Overload>
         </KeyWord>
         <KeyWord name="RaycastParams.new" func="yes">
@@ -1862,41 +1806,38 @@ Unlike most data types in Luau, you can change all of the members of RaycastPara
             <Overload retVal="boolean" descr="
 Checks whether v1 is equal to v2, without invoking any metamethod. Returns a boolean. 
         ">
-                <Param name="variant:v1" />
-                <Param name="variant:v2" />
+                <Param name="v1: variant" />
+                <Param name="v2: variant" />
             </Overload>
         </KeyWord>
         <KeyWord name="rawget" func="yes">
             <Overload retVal="variant" descr="
-Gets the real value of t[index], without invoking any metamethod. index may be any value. 
+Gets the real value of t[idx], without invoking any metamethod. idx may be any value. 
         ">
-                <Param name="table:t" />
-                <Param name="variant:index" />
+                <Param name="t: table" />
+                <Param name="idx: variant" />
             </Overload>
         </KeyWord>
         <KeyWord name="rawset" func="yes">
             <Overload retVal="table" descr="
-Sets the real value of table[index] to value, without invoking any metamethod. table must 
-be a table, index any value different from nil, and value any Lua value.
+Sets the real value of t[idx] to val, without invoking any metamethod. t must 
+be a table, idx any value different from nil, and val any Lua value.
 
-This function returns table. 
+This function returns t. 
         ">
-                <Param name="table" />
-                <Param name="variant:index" />
-                <Param name="variant:value" />
+                <Param name="t: table" />
+                <Param name="idx: variant" />
+                <Param name="val: variant" />
             </Overload>
         </KeyWord>
-        <KeyWord name="rconsoleclear" func="yes">
-            <Overload retVal="void" descr="Clears the console.">
-            </Overload>
+        <KeyWord name="rconsoleclear()" func="yes">
+            <Overload retVal="void" descr="Clears the console."/>
         </KeyWord>
-        <KeyWord name="rconsoleinput" func="yes">
-            <Overload retVal="string" descr="Yields until the user inputs information into their console. Returns the input they put in.">
-            </Overload>
+        <KeyWord name="rconsoleinput()" func="yes">
+            <Overload retVal="string" descr="Yields until the user inputs information into their console. Returns the input they put in."/>
         </KeyWord>
-        <KeyWord name="rconsoleinputasync" func="yes">
-            <Overload retVal="string" descr="Similar to rconsoleinput.">
-            </Overload>
+        <KeyWord name="rconsoleinputasync()" func="yes">
+            <Overload retVal="string" descr="Similar to rconsoleinput."/>
         </KeyWord>
         <KeyWord name="rconsolename" func="yes">
             <Overload retVal="void" descr="Sets the currently allocated console title to title.">
@@ -1948,22 +1889,22 @@ The Rect describes a rectangle on a 2D plane. It is constructed using two of its
             <Overload retVal="Region3 object" descr="
 The Region3 data type describes a volume in 3D space similar to an axis-aligned rectangular prism. It is commonly used with Terrain functions and functions that detect parts within a volume, such as WorldRoot:FindPartsInRegion3().
 
-The prism's center is accessible using the Region3.CFrame property and the prism's size is accessible through the Region3.Size property. Note that the components of this property may be negative.
+The prism&#34;s center is accessible using the Region3.CFrame property and the prism&#34;s size is accessible through the Region3.Size property. Note that the components of this property may be negative.
 
 The Region3:ExpandToGrid() method returns a new Region3 whose bounds comply with a provided resolution value. The resulting volume may be equal to or greater than the original volume, but never smaller.
         ">
-                <Param name="Vector3:min" />
-                <Param name="Vector3:max" />
+                <Param name="min: Vector3" />
+                <Param name="max: Vector3" />
             </Overload>
         </KeyWord>
         <KeyWord name="Region3int16" func="yes">
             <Overload retVal="Region3int16 object" descr="
 Not to be confused with Region3, a separate class that fulfills a different purpose.
 
-The Region3int16 data type represents a volume in 3D space similar to an axis-aligned rectangular prism. It uses two Vector3int16 to store the volume's bounds in the Min and Max properties. It is constructed using Region3int16.new(Min, Max), given the two Vector3int16 bounds. This data type features no functions or operations.
+The Region3int16 data type represents a volume in 3D space similar to an axis-aligned rectangular prism. It uses two Vector3int16 to store the volume&#34;s bounds in the Min and Max properties. It is constructed using Region3int16.new(Min, Max), given the two Vector3int16 bounds. This data type features no functions or operations.
         ">
-                <Param name="Vector3int16:min" />
-                <Param name="Vector3int16:max" />
+                <Param name="min: Vector3int16" />
+                <Param name="max: Vector3int16" />
             </Overload>
         </KeyWord>
         <KeyWord name="repeat" func="no" />
@@ -2002,9 +1943,7 @@ the module, then require signals an error.
         </KeyWord>
         <KeyWord name="return" func="no" />
         <KeyWord name="RotationCurveKey.new" func="yes">
-            <Overload retVal="RotationCurveKey" descr="
-Returns a RotationCurveKey object that represents a rotation, used by a RotationCurve Instance.
-        "></Overload>
+            <Overload retVal="RotationCurveKey" descr="Returns a RotationCurveKey object that represents a rotation, used by a RotationCurve Instance."/>
         </KeyWord>
         <KeyWord name="saveinstance" func="yes">
             <Overload retVal="void" descr="
@@ -2020,10 +1959,10 @@ Saves the current game into your workspace folder. You can use table t to custom
         <KeyWord name="select" func="yes">
             <Overload retVal="Tuple" descr="
 If index is a number, returns all arguments after argument number index. Otherwise, index 
-must be the string '#', and select returns the total number of extra arguments it received. 
+must be the string &#34;#&#34;, and select returns the total number of extra arguments it received. 
         ">
                 <Param name="index: variant" />
-                <Param name="args: Tuple" />
+                <Param name="args: Tuple&lt;variant&gt;" />
             </Overload>
         </KeyWord>
         <KeyWord name="setclipboard" func="yes">
@@ -2035,7 +1974,7 @@ must be the string '#', and select returns the total number of extra arguments i
             <Overload retVal="void" descr="Set constant idx to tuple value at level or function fi.">
                 <Param name="fi: union&lt;function, number&gt;" />
                 <Param name="idx: union&lt;string, int&gt;" />
-                <Param name="value: union&lt;number, bool, nil, string&gt;" />
+                <Param name="value: union&lt;number, boolean, nil, string&gt;" />
             </Overload>
         </KeyWord>
         <KeyWord name="setfenv" func="yes">
@@ -2047,7 +1986,7 @@ setfenv returns the given function.
 As a special case, when f is 0 setfenv changes the environment of the running thread. 
 In this case, setfenv returns no values. 
         ">
-                <Param name="f: variant" />
+                <Param name="fi: union&lt;function,int&gt;" />
                 <Param name="fenv: table" />
             </Overload>
         </KeyWord>
@@ -2060,7 +1999,7 @@ Sets FFlag with Value. Must be run before the game loads, auto execute + auto la
             </Overload>
         </KeyWord>
         <KeyWord name="setfpscap" func="yes">
-            <Overload retVal="void" descr="Sets 'cap' to the games's FPS cap.">
+            <Overload retVal="void" descr="Sets &#34;cap&#34; to the games&#34;s FPS cap.">
                 <Param name="cap: number" />
             </Overload>
         </KeyWord>
@@ -2103,21 +2042,21 @@ Sets the current namecall method to the new namecall method. Must be called in a
             </Overload>
         </KeyWord>
         <KeyWord name="setrawmetatable" func="yes">
-            <Overload retVal="bool" descr="
-Sets o's metatable to mt even if the __metatable field exists in o's metatable.
+            <Overload retVal="boolean" descr="
+Sets o&#34;s metatable to mt even if the __metatable field exists in o&#34;s metatable.
         ">
                 <Param name="o: object" />
                 <Param name="mt: table" />
             </Overload>
         </KeyWord>
         <KeyWord name="setreadonly" func="yes">
-            <Overload retVal="void" descr="Sets t's read-only value to val.">
+            <Overload retVal="void" descr="Sets t&#34;s read-only value to val.">
                 <Param name="t: table" />
                 <Param name="val: boolean" />
             </Overload>
         </KeyWord>
         <KeyWord name="setscriptable" func="yes">
-            <Overload retVal="void" descr="Sets property 'prop' in obj to 'scriptable'.">
+            <Overload retVal="void" descr="Sets property &#34;prop&#34; in obj to &#34;scriptable&#34;.">
                 <Param name="obj: Instance" />
                 <Param name="prop: Property" />
                 <Param name="scriptable: boolean" />
@@ -2130,11 +2069,8 @@ Sets o's metatable to mt even if the __metatable field exists in o's metatable.
                 <Param name="val: table" />
             </Overload>
         </KeyWord>
-        <KeyWord name="settings" func="yes">
-            <Overload retVal="GlobalSettings" descr="
-Returns the GlobalSettings object, which can be used to access the settings objects that are used in Roblox Studio's settings menu.
-        ">
-            </Overload>
+        <KeyWord name="settings()" func="yes">
+            <Overload retVal="GlobalSettings" descr="Returns the GlobalSettings object, which can be used to access the settings objects that are used in Roblox Studio&#34;s settings menu."/>
         </KeyWord>
         <KeyWord name="setuntouched" func="yes">
             <Overload retVal="void" descr="Sets the untouched value of obj to isUntouched.">
@@ -2153,30 +2089,26 @@ Returns the GlobalSettings object, which can be used to access the settings obje
             <Overload retVal="void" descr="
 Runs the specified callback function in a separate thread, without yielding the current thread.
 
-The function will be executed the next time Roblox's Task Scheduler runs an update cycle. This delay will take at least 29 milliseconds but can arbitrarily take longer, depending on the target framerate and various throttling conditions.
+The function will be executed the next time Roblox&#34;s Task Scheduler runs an update cycle. This delay will take at least 29 milliseconds but can arbitrarily take longer, depending on the target framerate and various throttling conditions.
 
 The callback function is invoked with two arguments:
 
 The first being the amount of time which elapsed from when spawn was called to when the function was invoked.
 The second being equivalent to elapsedTime() or roughly how long the engine has been running.
         ">
-                <Param name="function:callback" />
+                <Param name="callback: function" />
             </Overload>
         </KeyWord>
         <KeyWord name="spawn" func="yes">
-            <Overload retVal="void" descr="Equivalent to 'Spawn'.">
-                <Param name="function:callback" />
+            <Overload retVal="void" descr="Equivalent to &#34;Spawn&#34;.">
+                <Param name="callback: function" />
             </Overload>
         </KeyWord>
-        <KeyWord name="Stats" func="yes">
-            <Overload retVal="Stats" descr="
-Returns the Stats service. It is preferred that developers use ServiceProvider:GetService() to retrieve it instead.
-        ">
-            </Overload>
+        <KeyWord name="Stats()" func="yes">
+            <Overload retVal="Stats" descr="Returns the Stats service. It is preferred that developers use ServiceProvider:GetService() to retrieve it instead."/>
         </KeyWord>
-        <KeyWord name="stats" func="yes">
-            <Overload retVal="Stats" descr="Equivalent to 'Stats'.">
-            </Overload>
+        <KeyWord name="stats()" func="yes">
+            <Overload retVal="Stats" descr="Equivalent to &#34;Stats&#34;."/>
         </KeyWord>
         <KeyWord name="string.byte" func="yes">
             <Overload retVal="int" descr="
@@ -2185,7 +2117,9 @@ value for i is 1; the default value for j is i.
 
 Note that numerical codes are not necessarily portable across platforms. 
         ">
-                <Param name="s [, i [, j]]" />
+                <Param name="s: string" />
+                <Param name="i: number = 1" />
+                <Param name="j: number = i" />
             </Overload>
         </KeyWord>
         <KeyWord name="string.char" func="yes">
@@ -2195,7 +2129,7 @@ in which each character has the internal numerical code equal to its correspondi
 
 Note that numerical codes are not necessarily portable across platforms. 
         ">
-                <Param name="number:..." />
+                <Param name="nums: Tuple&lt;number&gt;" />
             </Overload>
         </KeyWord>
         <KeyWord name="string.dump" func="yes">
@@ -2204,7 +2138,7 @@ Returns a string containing a binary representation of the given function, so th
 loadstring on this string returns a copy of the function. function must be a Lua function 
 without upvalues. 
         ">
-                <Param name="function" />
+                <Param name="f: function" />
             </Overload>
         </KeyWord>
         <KeyWord name="string.find" func="yes">
@@ -2213,16 +2147,17 @@ Looks for the first match of pattern in the string s. If it finds a match, then 
 the indices of s where this occurrence starts and ends; otherwise, it returns nil. A third, 
 optional numerical argument init specifies where to start the search; its default value is 1 
 and can be negative. A value of true as a fourth, optional argument plain turns off the 
-pattern matching facilities, so the function does a plain 'find substring' operation, with 
-no characters in pattern being considered 'magic'. Note that if plain is given, then init 
+pattern matching facilities, so the function does a plain &#34;find substring&#34; operation, with 
+no characters in pattern being considered &#34;magic&#34;. Note that if plain is given, then init 
 must be given as well.
 
 If the pattern has captures, then in a successful match the captured values are also returned, 
 after the two indices. 
         ">
-                <Param name="s" />
-                <Param name="pattern" />
-                <Param name="[, init [, plain]]" />
+                <Param name="s: string" />
+                <Param name="pattern: string" />
+                <Param name="init: number = 1" />
+                <Param name="plain: boolean = false" />
             </Overload>
         </KeyWord>
         <KeyWord name="string.format" func="yes">
@@ -2235,12 +2170,12 @@ a string in a form suitable to be safely read back by the Lua interpreter: the s
 written between double quotes, and all double quotes, newlines, embedded zeros, and backslashes 
 in the string are correctly escaped when written. For instance, the call
 
-     string.format('%q', 'a string with ''quotes'' and \n new line')
+     string.format(&#34;%q&#34;, &#34;a string with &#34;&#34;quotes&#34;&#34; and \n new line&#34;)
 
 will produce the string:
 
-     'a string with \''quotes\'' and \
-      new line'
+     &#34;a string with \&#34;&#34;quotes\&#34;&#34; and \
+      new line&#34;
 
 The options c, d, E, e, f, g, G, i, o, u, X, and x all expect a number as argument, whereas 
 q and s expect a string.
@@ -2248,8 +2183,8 @@ q and s expect a string.
 This function does not accept string values containing embedded zeros, except as arguments 
 to the q option. 
         ">
-                <Param name="formatstring" />
-                <Param name="···" />
+                <Param name="format: string" />
+                <Param name="args: Tuple&lt;variant&gt;" />
             </Overload>
         </KeyWord>
         <KeyWord name="string.gmatch" func="yes">
@@ -2260,8 +2195,8 @@ in each call.
 
 As an example, the following loop
 
-     s = 'hello world from Lua'
-     for w in string.gmatch(s, '%a+') do
+     s = &#34;hello world from Lua&#34;
+     for w in string.gmatch(s, &#34;%a+&#34;) do
        print(w)
      end
 
@@ -2269,16 +2204,16 @@ will iterate over all the words from string s, printing one per line. The next e
 all pairs key=value from the given string into a table:
 
      t = {}
-     s = 'from=world, to=Lua'
-     for k, v in string.gmatch(s, '(%w+)=(%w+)') do
+     s = &#34;from=world, to=Lua&#34;
+     for k, v in string.gmatch(s, &#34;(%w+)=(%w+)&#34;) do
        t[k] = v
      end
 
-For this function, a '^' at the start of a pattern does not work as an anchor, as this would 
+For this function, a &#34;^&#34; at the start of a pattern does not work as an anchor, as this would 
 prevent the iteration. 
         ">
-                <Param name="s" />
-                <Param name="pattern" />
+                <Param name="s: string" />
+                <Param name="pattern: string" />
             </Overload>
         </KeyWord>
         <KeyWord name="string.gsub" func="yes">
@@ -2289,18 +2224,18 @@ a function. gsub also returns, as its second value, the total number of matches 
 
 Look at the online documentation for this function.
 ">
-                <Param name="s" />
-                <Param name="pattern" />
-                <Param name="repl" />
-                <Param name="[, n]" />
+                <Param name="s: string" />
+                <Param name="pattern: string" />
+                <Param name="repl: variant" />
+                <Param name="n: int = 0" />
             </Overload>
         </KeyWord>
         <KeyWord name="string.len" func="yes">
             <Overload retVal="int" descr="
-Receives a string and returns its length. The empty string '' has length 0. Embedded zeros are 
-counted, so 'a\000bc\000' has length 5. 
+Receives a string and returns its length. The empty string &#34;&#34; has length 0. Embedded zeros are 
+counted, so &#34;a\000bc\000&#34; has length 5. 
         ">
-                <Param name="s" />
+                <Param name="s: string" />
             </Overload>
         </KeyWord>
         <KeyWord name="string.lower" func="yes">
@@ -2309,7 +2244,7 @@ Receives a string and returns a copy of this string with all uppercase letters c
 lowercase. All other characters are left unchanged. The definition of what an uppercase 
 letter is depends on the current locale. 
         ">
-                <Param name="s" />
+                <Param name="s: string" />
             </Overload>
         </KeyWord>
         <KeyWord name="string.match" func="yes">
@@ -2319,32 +2254,32 @@ captures from the pattern; otherwise it returns nil. If pattern specifies no cap
 the whole match is returned. A third, optional numerical argument init specifies where to 
 start the search; its default value is 1 and can be negative. 
         ">
-                <Param name="s" />
-                <Param name="pattern" />
-                <Param name="[, init]" />
+                <Param name="s: string" />
+                <Param name="pattern: string" />
+                <Param name="init: int = 1" />
             </Overload>
         </KeyWord>
         <KeyWord name="string.pack" func="yes">
             <Overload retVal="string" descr="
 Returns a binary string containing the provided arguments. The description in the first argument, which must be a string, determines the way the remaining arguments are packed.
         ">
-                <Param name="format" />
-                <Param name="..." />
+                <Param name="format: string" />
+                <Param name="args: Tuple&lt;string&gt;" />
             </Overload>
         </KeyWord>
         <KeyWord name="string.packsize" func="yes">
             <Overload retVal="int" descr="
-Returns the size in bytes of any string packed with a given description. You can't use s and z because they have variable lengths.
+Returns the size in bytes of any string packed with a given description. You can&#34;t use s and z because they have variable lengths.
         ">
-                <Param name="format" />
+                <Param name="format: string" />
             </Overload>
         </KeyWord>
         <KeyWord name="string.rep" func="yes">
             <Overload retVal="string" descr="
 Returns a string that is the concatenation of n copies of the string s. 
         ">
-                <Param name="s" />
-                <Param name="n" />
+                <Param name="s: string" />
+                <Param name="n: int" />
             </Overload>
         </KeyWord>
         <KeyWord name="string.reverse" func="yes">
@@ -2358,7 +2293,7 @@ Returns a string that is the string s reversed.
             <Overload retVal="table" descr="
 Splits a string into parts based on the defined separator character(s), returning a table of ordered results. By default, the separator character is , but you can specify an alternative character or series of characters.
 
-If an empty 'slice' is located, that part will be returned as an empty string. Also note that whitespace from the original string will be preserved.
+If an empty &#34;slice&#34; is located, that part will be returned as an empty string. Also note that whitespace from the original string will be preserved.
         ">
                 <Param name="s: string" />
                 <Param name="separator: string" />
@@ -2414,81 +2349,79 @@ is depends on the current locale.
             </Overload>
         </KeyWord>
         <KeyWord name="syn.is_cached" func="yes">
-            <Overload retVal="bool" descr="Returns true if obj is currently cached within the registry.">
-                <Param name="Instance:obj" />
+            <Overload retVal="boolean" descr="Returns true if obj is currently cached within the registry.">
+                <Param name="obj: Instance" />
             </Overload>
         </KeyWord>
         <KeyWord name="syn.write_clipboard" func="yes">
             <Overload retVal="void" descr="Writes content to the current Windows clipboard.">
-                <Param name="content" />
+                <Param name="content: string" />
             </Overload>
         </KeyWord>
         <KeyWord name="syn.queue_on_teleport" func="yes">
             <Overload retVal="void" descr="Executes code after player is teleported.">
-                <Param name="code" />
+                <Param name="code: string" />
             </Overload>
         </KeyWord>
         <KeyWord name="syn.protect_gui" func="yes">
             <Overload retVal="void" descr="
         Protects GUI from recursive FindFirstChild-style attacks. After you call the function, recursive FFA calls from non-Synapse contexts will skip over your protected instances and all children of such instances.
         ">
-                <Param name="&lt;screen gui>:GUI" />
+                <Param name="GUI: &lt;screen gui&gt;" />
             </Overload>
         </KeyWord>
         <KeyWord name="syn.unprotect_gui" func="yes">
-            <Overload retVal="void" descr="
-        Removes protection from the GUI. Errors if gui isn't already protected.
-        ">
-                <Param name="&lt;screen gui>:GUI" />
+            <Overload retVal="void" descr="Removes protection from the GUI. Errors if gui isn&#34;t already protected.">
+                <Param name="GUI: &lt;screen gui&gt;" />
             </Overload>
         </KeyWord>
         <KeyWord name="syn.request" func="yes">
             <Overload retVal="table" descr="
             Sends a http request with parameters in options. See Headers and Request/Response Dictionairy Fields : https://docs.synapse.to/docs/reference/syn_lib.html">
-                <Param name="table:options" />
+                <Param name="options: table" />
             </Overload>
         </KeyWord>
         <KeyWord name="syn.create_secure_function" func="yes">
             <Overload retVal="string" descr="
-        Protects your code with secure function, making it much more difficult for others to alter or view your code. This function can only be used by users who have been given access.
+Protects your code with secure function, making it much more difficult for others to alter or view your code. This function can only be used by users who have been given access.
         ">
-                <Param name="code" />
+                <Param name="code: string" />
             </Overload>
         </KeyWord>
         <KeyWord name="syn.run_secure_function" func="yes">
             <Overload retVal="string" descr="Runs code protected by secure function.">
-                <Param name="code" />
+                <Param name="code: string" />
             </Overload>
         </KeyWord>
         <KeyWord name="syn.secure_call" func="yes">
             <Overload retVal="variant:..." descr="
-        Spoofs caller environment and context when calling func with script's environment. You can pass as many arguments args as is required. secure_call returns whatever the called function returns.
+        Spoofs caller environment and context when calling func with script&#34;s environment. You can pass as many arguments args as is required. secure_call returns whatever the called function returns.
         You can also pass a table to script if you wish to customize how the call will occur.
         ">
-                <Param name="functions:f" />
-                <Param name="union&lt;LocalScript, ModuleScript, table>:script" />
-                <Param name="variant:..." />
+                <Param name="f: function" />
+                <Param name="script: union&lt;LocalScript, ModuleScript, table>" />
+                <Param name="args: Tuple&lt;variant&gt;" />
             </Overload>
         </KeyWord>
         <KeyWord name="syn.websocket.connect" func="yes">
             <Overload retVal="object" descr="
         Connects to the url specified. Errors if the connection fails. See websocket Methods and Events : https://docs.synapse.to/docs/reference/websocket_lib.html.
         ">
-                <Param name="url" />
+                <Param name="url: string" />
             </Overload>
         </KeyWord>
         <KeyWord name="table.clear" func="yes">
             <Overload retVal="void" descr="
-Sets the value for all keys within the given table to nil. This causes the # operator to return 0 for the given table. The allocated capacity of the table's array portion is maintained, which allows for efficient re-use of the space.
+Sets the value for all keys within the given table to nil. This causes the # operator to return 0 for the given table. The allocated capacity of the table&#34;s array portion is maintained, which allows for efficient re-use of the space.
         ">
-                <Param name="table" />
+                <Param name="t: array" />
             </Overload>
         </KeyWord>
         <KeyWord name="table.clone" func="yes">
             <Overload retVal="table" descr="
 Returns an unfrozen shallow copy of the provided table.
         ">
-                <Param name="table" />
+                <Param name="t: array" />
             </Overload>
         </KeyWord>
         <KeyWord name="table.concat" func="yes">
@@ -2497,16 +2430,16 @@ Given an array where all elements are strings or numbers, returns table[i]..sep.
 The default value for sep is the empty string, the default for i is 1, and the default for j is the length 
 of the table. If i is greater than j, returns the empty string. 
         ">
-                <Param name="table" />
-                <Param name="[, sep [, i [, j]]]" />
+                <Param name="t: array" />
+                <Param name="sep: string" />
             </Overload>
         </KeyWord>
         <KeyWord name="table.create" func="yes">
-            <Overload retVal="table" descr="
+            <Overload retVal="array" descr="
 Creates a table with the array portion allocated to the given number of elements, optionally filled with the given value.
         ">
-                <Param name="count" />
-                <Param name="value" />
+                <Param name="count: int" />
+                <Param name="value: variant" />
             </Overload>
         </KeyWord>
         <KeyWord name="table.find" func="yes">
@@ -2515,59 +2448,53 @@ Within the given array-like table haystack, find the first occurrence of value n
 
 A linear search algorithm is performed.
         ">
-                <Param name="haystack" />
-                <Param name="needle" />
-                <Param name="init" />
+                <Param name="haystack: array" />
+                <Param name="needle: int" />
+                <Param name="init: int" />
             </Overload>
         </KeyWord>
         <KeyWord name="table.foreach" func="yes">
-            <Overload retVal="void" descr="
-Iterates over the provided table, passing the key and value of each iteration over to the provided function.
-        ">
-                <Param name="table" />
-                <Param name="Function:f" />
+            <Overload retVal="void" descr="Iterates over the provided table, passing the key and value of each iteration over to the provided function.">
+                <Param name="t: array" />
+                <Param name="f: function" />
             </Overload>
         </KeyWord>
         <KeyWord name="table.foreachi" func="yes">
-            <Overload retVal="void" descr="
-This is similar to table.foreach() except that index-value pairs are passed, not key-value pairs.
-        ">
-                <Param name="table" />
-                <Param name="Function:f" />
+            <Overload retVal="void" descr="This is similar to table.foreach() except that index-value pairs are passed, not key-value pairs.">
+                <Param name="t: array" />
+                <Param name="f: function" />
             </Overload>
         </KeyWord>
-        <KeyWord name="table.freeze" func="yes">
+        <KeyWord name="table.array" func="yes">
             <Overload retVal="table" descr="
-This function makes the given table read-only, effectively 'freezing' it in its current state. Attempting to modify a frozen table throws an error.
+This function makes the given table read-only, effectively &#34;freezing&#34; it in its current state. Attempting to modify a frozen table throws an error.
 
 This freezing effect is shallow, which means that you can write to a table within a frozen table. To deep freeze a table, call this function recursively on all of the descending tables.
         ">
-                <Param name="table" />
+                <Param name="t: array" />
             </Overload>
         </KeyWord>
         <KeyWord name="table.getn" func="yes">
-            <Overload retVal="int" descr="
-Returns the number of elements in the table passed.
-        ">
-                <Param name="table" />
+            <Overload retVal="int" descr="Returns the number of elements in the table passed.">
+                <Param name="t: array" />
             </Overload>
         </KeyWord>
         <KeyWord name="table.insert" func="yes">
             <Overload retVal="void" descr="
-Inserts element value at position pos in table, shifting up other elements to open space, 
-if necessary. The default value for pos is n+1, where n is the length of the table (see §2.5.5), 
+Inserts element value at position pos in table, shifting up other elements to open space, if necessary. 
+The default value for pos is n+1, where n is the length of the table (see §2.5.5), 
 so that a call table.insert(t,x) inserts x at the end of table t. 
         ">
-                <Param name="table" />
-                <Param name="[pos,]" />
-                <Param name="value" />
+                <Param name="t: array" />
+                <Param name="pos: int = #t" />
+                <Param name="value: variant" />
             </Overload>
         </KeyWord>
         <KeyWord name="table.isfrozen" func="yes">
             <Overload retVal="boolean" descr="
-This function returns true if the given table is frozen and false if it isn't frozen. You can freeze tables using table.freeze().
+This function returns true if the given table is frozen and false if it isn&#34;t frozen. You can freeze tables using table.freeze().
         ">
-                <Param name="table" />
+                <Param name="t: array" />
             </Overload>
         </KeyWord>
         <KeyWord name="table.maxn" func="yes">
@@ -2575,29 +2502,27 @@ This function returns true if the given table is frozen and false if it isn't fr
 Returns the largest positive numerical index of the given table, or zero if the table has no 
 positive numerical indices. (To do its job this function does a linear traversal of the whole table.) 
         ">
-                <Param name="table" />
+                <Param name="t: array" />
             </Overload>
         </KeyWord>
         <KeyWord name="table.move" func="yes">
             <Overload retVal="table" descr="
 Copies elements from table src into table dst. Is equivalent to the multiple assignment statement: dst[t], ... = src[a], ..., src[b].
 
-The default for dst is src. The destination range may overlap with the source range.
-
-Returns dst for convenience.
+The default for dst is src. The destination range may overlap with the source range. Returns dst for convenience.
         ">
-                <Param name="src" />
-                <Param name="a" />
-                <Param name="b" />
-                <Param name="t" />
-                <Param name="dst" />
+                <Param name="src: array" />
+                <Param name="a: int" />
+                <Param name="b: int" />
+                <Param name="t: int" />
+                <Param name="dst: array" />
             </Overload>
         </KeyWord>
         <KeyWord name="table.pack" func="yes">
             <Overload retVal="variant" descr="
-Returns a new table with all arguments stored into keys 1, 2, etc. and with a field 'n' with the total number of arguments. Note that the resulting table may not be a sequence.
+Returns a new table with all arguments stored into keys 1, 2, etc. and with a field &#34;n&#34; with the total number of arguments. Note that the resulting table may not be a sequence.
         ">
-                <Param name="..." />
+                <Param name="args: Tuple&lt;variant&gt;" />
             </Overload>
         </KeyWord>
         <KeyWord name="table.remove" func="yes">
@@ -2606,8 +2531,8 @@ Removes from table the element at position pos, shifting down other elements to 
 if necessary. Returns the value of the removed element. The default value for pos is n, where n 
 is the length of the table, so that a call table.remove(t) removes the last element of table t. 
         ">
-                <Param name="table" />
-                <Param name="[, pos]" />
+                <Param name="t: array" />
+                <Param name="pos: int" />
             </Overload>
         </KeyWord>
         <KeyWord name="table.sort" func="yes">
@@ -2620,37 +2545,37 @@ after the sort). If comp is not given, then the standard Lua operator lessthan i
 The sort algorithm is not stable; that is, elements considered equal by the given order may have 
 their relative positions changed by the sort. 
         ">
-                <Param name="table" />
-                <Param name="[, comp]" />
+                <Param name="t: array" />
+                <Param name="comp: function?" />
             </Overload>
         </KeyWord>
         <KeyWord name="table.unpack" func="yes">
             <Overload retVal="tuple" descr="
 Returns the elements from the given list. By default, i is 1 and j is the length of list. This same functionality is also provided by the built-in unpack function.
         ">
-                <Param name="list" />
-                <Param name="i" />
-                <Param name="j" />
+                <Param name="list: array" />
+                <Param name="i: int" />
+                <Param name="j: int" />
             </Overload>
         </KeyWord>
         <KeyWord name="task.spawn" func="yes">
             <Overload retVal="thread" descr="
-Accepts a function or a thread (as returned by coroutine.create) and calls/resumes it immediately through the engine's scheduler. Arguments after the first are sent to the function/thread. This function does not return any value, even if the provided function returns one immediately.
+Accepts a function or a thread (as returned by coroutine.create) and calls/resumes it immediately through the engine&#34;s scheduler. Arguments after the first are sent to the function/thread. This function does not return any value, even if the provided function returns one immediately.
 
 This function is based on the fastSpawn pattern rather than being a replacement for the deprecated global spawn function. It is recommended that this function be used in place of fastSpawn.
         ">
-                <Param name="functionOrThread" />
-                <Param name="..." />
+                <Param name="call: union&lt;function,thread&gt;" />
+                <Param name="args: Tuple&lt;variant&gt;" />
             </Overload>
         </KeyWord>
         <KeyWord name="task.defer" func="yes">
             <Overload retVal="thread" descr="
-Accepts a function or a thread (as returned by coroutine.create) and defers it until the next resumption cycle, at which point it is resumed with the engine's scheduler like with task.spawn(). Arguments after the first are sent to the function/thread. This function does not return any value, even if the provided function returns one immediately.
+Accepts a function or a thread (as returned by coroutine.create) and defers it until the next resumption cycle, at which point it is resumed with the engine&#34;s scheduler like with task.spawn(). Arguments after the first are sent to the function/thread. This function does not return any value, even if the provided function returns one immediately.
 
 This function should be used when a similar behavior to task.spawn() is desirable, but the thread does not need to run immediately.
         ">
-                <Param name="functionOrThread" />
-                <Param name="..." />
+                <Param name="call: union&lt;function,thread&gt;" />
+                <Param name="args: Tuple&lt;variant&gt;" />
             </Overload>
         </KeyWord>
         <KeyWord name="task.delay" func="yes">
@@ -2661,9 +2586,9 @@ This function differs from the deprecated global delay function in that no throt
 
 You can calculate the actual time passed by calling os.clock() upon scheduling and in the scheduled function.
         ">
-                <Param name="duration" />
-                <Param name="functionOrThread" />
-                <Param name="..." />
+                <Param name="duration: int" />
+                <Param name="call: union&lt;function,thread&gt;" />
+                <Param name="args: Tuple&lt;variant&gt;" />
             </Overload>
         </KeyWord>
         <KeyWord name="task.desynchronize" func="yes">
@@ -2675,8 +2600,7 @@ Causes the following code to be run in parallel. If the script is already runnin
         <KeyWord name="task.synchronize" func="yes">
             <Overload retVal="void" descr="
 Causes the following code to be run in serial. If the script is already running in serial, no change occurs. For more information, see Parallel Luau : https://create.roblox.com/docs/scripting/luau/parallel-luau.
-        ">
-            </Overload>
+        "/>
         </KeyWord>
         <KeyWord name="task.wait" func="yes">
             <Overload retVal="float" descr="
@@ -2686,7 +2610,7 @@ If no duration is given, it will default to zero (0). This means the thread resu
 
 Unlike the deprecated global wait, this function does not throttle and guarantees the resumption of the thread on the first Heartbeat that occurs when it is due. This function also only returns the elapsed time and nothing else.
         ">
-                <Param name="duration" />
+                <Param name="duration: int" />
             </Overload>
         </KeyWord>
         <KeyWord name="task.cancel" func="yes">
@@ -2695,95 +2619,90 @@ Cancels a thread and closes it, preventing it from being resumed manually or by 
 
 This function can be used with other members of the task library that return a thread to cancel them before they are resumed.
         ">
-                <Param name="thread" />
+                <Param name="thread: thread" />
             </Overload>
         </KeyWord>
         <KeyWord name="then" func="no" />
-        <KeyWord name="tick" func="yes">
+        <KeyWord name="tick()" func="yes">
             <Overload retVal="float" descr="
-        Returns how much time has elapsed, in seconds, since the UNIX epoch, on the current local session's computer. The UNIX epoch is represented by the date January 1st, 1970.
-        ">
-            </Overload>
+Returns how much time has elapsed, in seconds, since the UNIX epoch, on the current local session&#34;s computer. The UNIX epoch is represented by the date January 1st, 1970."/>
         </KeyWord>
-        <KeyWord name="time" func="yes">
-            <Overload retVal="float" descr="
-        Returns the amount of time, in seconds, that has elapsed since the current game instance started running. If the current game instance is not running, this will be 0.
-        ">
-            </Overload>
+        <KeyWord name="time()" func="yes">
+            <Overload retVal="float" descr="Returns the amount of time, in seconds, that has elapsed since the current game instance started running. If the current game instance is not running, this will be 0."/>
         </KeyWord>
         <KeyWord name="tonumber" func="yes">
             <Overload retVal="variant" descr="
 Attempts to convert the arg into a number with a specified base to interpret the value in. If it cannot be converted, this function returns nil.
 
-The base may be any integer between 2 and 36, inclusive. In bases above 10, the letter 'A' (in either upper or lower case) represents 10, 'B' represents 11, and so forth, with 'Z' representing 35. In base 10 (the default), the number may have a decimal part, as well as an optional exponent part. In other bases, only unsigned integers are accepted.
+The base may be any integer between 2 and 36, inclusive. In bases above 10, the letter &#34;A&#34; (in either upper or lower case) represents 10, &#34;B&#34; represents 11, and so forth, with &#34;Z&#34; representing 35. In base 10 (the default), the number may have a decimal part, as well as an optional exponent part. In other bases, only unsigned integers are accepted.
 
 If a string begins with 0x and a base is not provided, the 0x is trimmed and the base is assumed to be 16, or hexadecimal.
         ">
-                <Param name="variant:arg" />
-                <Param name="number:base = 10" />
+                <Param name="arg: variant" />
+                <Param name="base: number = 10" />
             </Overload>
         </KeyWord>
         <KeyWord name="tostring" func="yes">
             <Overload retVal="string" descr="
 Receives an argument of any type and converts it to a string in a reasonable format. For complete control of how numbers are converted, use string.format. If the metatable of e has a __tostring metamethod, then it will be called with e as the only argument and will return the result.
         ">
-                <Param name="variant:e" />
+                <Param name="e: variant" />
             </Overload>
         </KeyWord>
         <KeyWord name="true" func="no" />
         <KeyWord name="type" func="yes">
             <Overload retVal="string" descr="
-Returns the type of its only argument, coded as a string. The possible results of this function are 'nil' (a string, not the value nil), 'number', 'string', 'boolean', 'table', 'function', 'thread', and 'userdata'. 
+Returns the type of its only argument, coded as a string. The possible results of this function are &#34;nil&#34; (a string, not the value nil), &#34;number&#34;, &#34;string&#34;, &#34;boolean&#34;, &#34;table&#34;, &#34;function&#34;, &#34;thread&#34;, and &#34;userdata&#34;. 
         ">
-                <Param name="variant" />
+                <Param name="val: variant" />
             </Overload>
         </KeyWord>
         <KeyWord name="typeof" func="yes">
             <Overload retVal="string" descr="
-Returns the type of the object specified, as a string. This function is more accurate than Lua's native type function, as it does not denote Roblox-specific types as userdata.
+Returns the type of the object specified, as a string. This function is more accurate than Lua&#34;s native type function, as it does not denote Roblox-specific types as userdata.
         ">
-                <Param name="variant" />
+                <Param name="val: variant" />
             </Overload>
         </KeyWord>
         <KeyWord name="TweenInfo.new" func="yes">
             <Overload retVal="TweenInfo object" descr="Creates a new TweenInfo from the provided parameters.">
-                <Param name="time = 1" />
-                <Param name="easingStyle = Enum.EasingStyle.Quad" />
-                <Param name="easingDirection = Enum.EasingDirection.Out" />
-                <Param name="repeatCount = 0" />
-                <Param name="reverses = false" />
-                <Param name="delayTime = 0" />
+                <Param name="time: int = 1" />
+                <Param name="easingStyle: EasingStyle = Enum.EasingStyle.Quad" />
+                <Param name="easingDirection: EasingDirection = Enum.EasingDirection.Out" />
+                <Param name="repeatCount: int = 0" />
+                <Param name="reverses: boolean = false" />
+                <Param name="delayTime: int = 0" />
             </Overload>
         </KeyWord>
         <KeyWord name="UDim.new" func="yes">
             <Overload retVal="UDim2 object" descr="Returns a new UDim from the given components.">
-                <Param name="Scale = 0" />
-                <Param name="Offset = 0" />
+                <Param name="Scale: int = 0" />
+                <Param name="Offset: int = 0" />
             </Overload>
         </KeyWord>
         <KeyWord name="UDim2.new" func="yes">
             <Overload retVal="UDim2 object" descr="
         Returns a new UDim2 given the coordinates of the two UDim components representing each axis.">
-                <Param name="xScale = 0" />
-                <Param name="xOffset = 0" />
-                <Param name="yScale = 0" />
-                <Param name="yOffset = 0" />
+                <Param name="xScale: int = 0" />
+                <Param name="xOffset: int = 0" />
+                <Param name="yScale: int = 0" />
+                <Param name="yOffset: int = 0" />
             </Overload>
         </KeyWord>
         <KeyWord name="UDim2.fromScale" func="yes">
             <Overload retVal="UDim2 object" descr="
         Returns a new UDim2 with the given scale components and no offsets.
         ">
-                <Param name="xScale = 0" />
-                <Param name="yScale = 0" />
+                <Param name="xScale: int = 0" />
+                <Param name="yScale: int = 0" />
             </Overload>
         </KeyWord>
         <KeyWord name="UDim2.fromOffset" func="yes">
             <Overload retVal="UDim2 object" descr="
         Returns a new UDim2 with the given offset components and no scales.
         ">
-                <Param name="xOffset = 0" />
-                <Param name="yOffset = 0" />
+                <Param name="xOffset: int = 0" />
+                <Param name="yOffset: int = 0" />
             </Overload>
         </KeyWord>
         <KeyWord name="unpack" func="yes">
@@ -2791,8 +2710,8 @@ Returns the type of the object specified, as a string. This function is more acc
 Returns the elements from the given table. By default, i is 1 and j is the length of list, as defined by the length operator.
         ">
                 <Param name="list: table" />
-                <Param name="i: number" />
-                <Param name="j: number" />                
+                <Param name="i: int" />
+                <Param name="j: int" />                
             </Overload>
         </KeyWord>
         <KeyWord name="unlockmodulescript" func="yes">
@@ -2803,123 +2722,113 @@ Returns the elements from the given table. By default, i is 1 and j is the lengt
         <KeyWord name="until" func="no" />
         <KeyWord name="UserSettings" func="yes">
             <Overload retVal="UserSettings" descr="
-Returns the UserSettings object, which is used to read information from the current user's game menu settings.
-        ">
-            </Overload>
+Returns the UserSettings object, which is used to read information from the current user&#34;s game menu settings.
+        "/>
         </KeyWord>
         <KeyWord name="utf8.char" func="yes">
             <Overload retVal="string" descr="
 Receives zero or more codepoints as integers, converts each one to its corresponding UTF-8 byte sequence and returns a string with the concatenation of all these sequences.
         ">
-                <Param name="..." />
+                <Param name="nums: Tuple&lt;nums&gt;" />
             </Overload>
         </KeyWord>
         <KeyWord name="utf8.codes" func="yes">
-            <Overload retVal="function,'str',0" descr="
-Returns an iterator function that will iterate over all codepoints in string 'str'. It raises an error if it meets any invalid byte sequence.
+            <Overload retVal="function,&#34;str&#34;,0" descr="
+Returns an iterator function that will iterate over all codepoints in string &#34;str&#34;. It raises an error if it meets any invalid byte sequence.
         ">
-                <Param name="str" />
+                <Param name="str: string" />
             </Overload>
         </KeyWord>
         <KeyWord name="utf8.codepoint" func="yes">
             <Overload retVal="tuple&lt;int&gt;" descr="
 Returns the codepoints (as integers) from all codepoints in the provided string (str) that start between byte positions i and j (both included). The default for i is 1 and for j is i. It raises an error if it meets any invalid byte sequence.
         ">
-                <Param name="str" />
-                <Param name="i = 1" />
-                <Param name="j = 1" />
+                <Param name="str: string" />
+                <Param name="i: int = 1" />
+                <Param name="j: int = 1" />
             </Overload>
         </KeyWord>
         <KeyWord name="utf8.len" func="yes">
             <Overload retVal="number" descr="
 Returns the number of UTF-8 codepoints in the string str that start between positions i and j (both inclusive). The default for i is 1 and for j is -1. If it finds any invalid byte sequence, returns a nil value plus the position of the first invalid byte.
         ">
-                <Param name="str" />
-                <Param name="i = 1" />
-                <Param name="j = 1" />
+                <Param name="str: string" />
+                <Param name="i: int = 1" />
+                <Param name="j: int = 1" />
             </Overload>
         </KeyWord>
         <KeyWord name="utf8.offset" func="yes">
             <Overload retVal="number" descr="
 Returns the position (in bytes) where the encoding of the n-th codepoint of s (counting from byte position i) starts. A negative n gets characters before position i. The default for i is 1 when n is non-negative and #s + 1 otherwise, so that utf8.offset(s, -n) gets the offset of the n-th character from the end of the string. If the specified character is neither in the subject nor right after its end, the function returns nil.
         ">
-                <Param name="str" />
-                <Param name="n" />
-                <Param name="i = 1" />
+                <Param name="str: string" />
+                <Param name="n: int" />
+                <Param name="i: int = 1" />
             </Overload>
         </KeyWord>
         <KeyWord name="utf8.graphemes" func="yes">
-            <Overload retVal="function" descr="
-Returns an iterator function that will iterate the grapheme clusters of the string.
-        ">
-                <Param name="str" />
-                <Param name="i" />
-                <Param name="j" />
+            <Overload retVal="function" descr="Returns an iterator function that will iterate the grapheme clusters of the string.">
+                <Param name="str: string" />
+                <Param name="i: int" />
+                <Param name="j: int" />
             </Overload>
         </KeyWord>
         <KeyWord name="utf8.nfcnormalize" func="yes">
-            <Overload retVal="string" descr="
-Converts the input string to Normal Form C, which tries to convert decomposed characters into composed characters.
-        ">
-                <Param name="str" />
+            <Overload retVal="string" descr="Converts the input string to Normal Form C, which tries to convert decomposed characters into composed characters.">
+                <Param name="str: string" />
             </Overload>
         </KeyWord>
         <KeyWord name="utf8.nfdnormalize" func="yes">
-            <Overload retVal="string" descr="
-Converts the input string to Normal Form D, which tries to break up composed characters into decomposed characters.
-        ">
-                <Param name="str" />
+            <Overload retVal="string" descr="Converts the input string to Normal Form D, which tries to break up composed characters into decomposed characters.">
+                <Param name="str: string" />
             </Overload>
         </KeyWord>
-        <KeyWord name="validfgwindow" func="yes">
-            <Overload retVal="boolean" descr="Returns true if Roblox is the foreground window.">
-            </Overload>
+        <KeyWord name="validfgwindow()" func="yes">
+            <Overload retVal="boolean" descr="Returns true if Roblox is the foreground window."/>
         </KeyWord>
         <KeyWord name="Vector2.new" func="yes">
-            <Overload retVal="Vector2 object" descr="
-The Vector2 data type represents a 2D value with direction and magnitude. Some applications include GUI elements and 2D mouse positions.
-        ">
-                <Param name="x = 0" />
-                <Param name="y = 0" />
+            <Overload retVal="Vector2 object" descr="The Vector2 data type represents a 2D value with direction and magnitude. Some applications include GUI elements and 2D mouse positions.">
+                <Param name="x: int = 0" />
+                <Param name="y: int = 0" />
             </Overload>
         </KeyWord>
         <KeyWord name="Vector3.new" func="yes">
             <Overload retVal="Vector3 object" descr="
 The Vector3 data type represents a vector in 3D space, typically usually used as a point in 3D space or the dimensions of a rectangular prism. Vector3 supports basic component-based arithmetic operations (sum, difference, product, and quotient) and these operations can be applied on the left or right hand side to either another Vector3 or a number. It also features methods for common vector operations, such as Cross() and Dot(). See documentation : https://create.roblox.com/docs/reference/engine/datatypes/Vector3
         ">
-                <Param name="x = 0" />
-                <Param name="y = 0" />
-                <Param name="z = 0" />
+                <Param name="x: int = 0" />
+                <Param name="y: int = 0" />
+                <Param name="z: int = 0" />
             </Overload>
         </KeyWord>
         <KeyWord name="Vector3.fromNormalId" func="yes">
             <Overload retVal="Vector3 object" descr="Returns a new Vector3 in the given orthogonal direction.">
-                <Param name="Enum.NormalId:normal" />
+                <Param name="normal: Enum.NormalId" />
             </Overload>
         </KeyWord>
         <KeyWord name="Vector3.fromAxis" func="yes">
             <Overload retVal="Vector3 object" descr="Returns a new Vector3 for the given axis.">
-                <Param name="Enum.Axis:axis" />
+                <Param name="axis: Enum.Axis" />
             </Overload>
         </KeyWord>
         <KeyWord name="Vector3int16.new" func="yes">
             <Overload retVal="Vector3int16 object" descr="
 The Vector3int16 data type represents a vector in 3D space with a signed 16-bit integer for its components. It is similar to Vector3 in that it allows for the same arithmetic operations, but it lacks commonly used vector functions. See documentation : https://create.roblox.com/docs/reference/engine/datatypes/Vector3int16.
         ">
-                <Param name="x = 0" />
-                <Param name="y = 0" />
-                <Param name="z = 0" />
+                <Param name="x: int = 0" />
+                <Param name="y: int = 0" />
+                <Param name="z: int = 0" />
             </Overload>
         </KeyWord>
         <KeyWord name="Vector2int16.new" func="yes">
             <Overload retVal="Vector3int16 object" descr="
 The Vector2int16 data type represents a vector in 2D space with a signed 16-bit integer for its components. It is similar to Vector2 in that it allows for the same arithmetic operations, but it lacks commonly used vector functions. See documentation : https://create.roblox.com/docs/reference/engine/datatypes/Vector2int16.
         ">
-                <Param name="x = 0" />
-                <Param name="y = 0" />
+                <Param name="x: int = 0" />
+                <Param name="y: int = 0" />
             </Overload>
         </KeyWord>
-        <KeyWord name="Version" func="yes">
+        <KeyWord name="Version()" func="yes">
             <Overload retVal="string" descr="
 Returns the current version of Roblox as a string. The integers in the version string are separated by periods, and each integers represent the following, in order:
 
@@ -2927,11 +2836,10 @@ Generation - The current generation of the application shell that is hosting the
 Version - The current release version of Roblox.
 Patch - The current patch number for this version of Roblox.
 Commit - The ID of the last internal commit that was accepted into this version of the client.
-        ">
-            </Overload>
+        "/>
         </KeyWord>
-        <KeyWord name="version" func="yes">
-            <Overload retVal="string" descr="Equivalent to 'Version'."/>
+        <KeyWord name="version()" func="yes">
+            <Overload retVal="string" descr="Equivalent to &#34;Version&#34;."/>
         </KeyWord>
         <KeyWord name="Wait" func="yes">
             <Overload retVal="number,number" descr="
@@ -2942,19 +2850,19 @@ The delay will have a minimum duration of 29 milliseconds, but this minimum may 
 Actual time yielded (in seconds).
 Total time since the software was initialized (in seconds).
         ">
-                <Param name="number:seconds" />
+                <Param name="seconds: float" />
             </Overload>
         </KeyWord>
         <KeyWord name="Wait" func="yes">
-            <Overload retVal="number,number" descr="Equivalent to 'Wait'.">
-                <Param name="number:seconds" />
+            <Overload retVal="number,number" descr="Equivalent to &#34;Wait&#34;.">
+                <Param name="seconds: float" />
             </Overload>
         </KeyWord>
         <KeyWord name="warn" func="yes">
             <Overload retVal="void" descr="
-Behaves identically to Lua's print function, except the output is styled as a warning, with yellow text and a timestamp. This function accepts any number of arguments, and will attempt to convert them into strings which will then be joined together with spaces between them.
+Behaves identically to Lua&#34;s print function, except the output is styled as a warning, with yellow text and a timestamp. This function accepts any number of arguments, and will attempt to convert them into strings which will then be joined together with spaces between them.
         ">
-                <Param name="tuple" />
+                <Param name="args: Tuple&lt;variant&gt;" />
             </Overload>
         </KeyWord>
         <KeyWord name="while" func="no" />
